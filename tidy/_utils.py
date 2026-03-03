@@ -1,4 +1,4 @@
-"""Utility helpers for the maintenance CLI."""
+"""Utility helpers for the tidy CLI."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-# maintenance/tidy — Git History Scrubbing Tool
+# tidy — Git History Scrubbing Tool
 
 A CLI tool for scanning, planning, executing, verifying, and reporting
 git-history rewrites to remove sensitive patterns from commit messages and
@@ -12,12 +12,12 @@ file contents.
 
 ## Setup
 
-1. Create a patterns file at `maintenance/patterns` with one sensitive
+1. Create a patterns file at `tidy/patterns` with one sensitive
    string per line.  Lines starting with `#` are comments.
 
-   See `maintenance/patterns.example` for the format.
+   See `tidy/patterns.example` for the format.
 
-2. Ensure `maintenance/patterns` is listed in `.gitignore` (the tool
+2. Ensure `tidy/patterns` is listed in `.gitignore` (the tool
    enforces this as a safety check).
 
 ## Subcommands
@@ -27,7 +27,7 @@ file contents.
 Scan commit messages and tracked file contents for pattern matches.
 
 ```
-python -m maintenance scan --patterns maintenance/patterns [--repo /path/to/repo] [--json]
+python -m tidy scan --patterns tidy/patterns [--repo /path/to/repo] [--json]
 ```
 
 - `--patterns` (required): path to the patterns file.
@@ -41,7 +41,7 @@ tags, branches, forks, and a before/after preview of what the replacement
 will look like.
 
 ```
-python -m maintenance plan --patterns maintenance/patterns --replacement "[REDACTED]" [--repo /path/to/repo]
+python -m tidy plan --patterns tidy/patterns --replacement "[REDACTED]" [--repo /path/to/repo]
 ```
 
 - `--replacement` (default `[REDACTED]`): the text that replaces each
@@ -62,7 +62,7 @@ Execute the full scrub pipeline:
 7. **Summary** — prints old SHAs needed for a GitHub Support ticket.
 
 ```
-python -m maintenance clean --patterns maintenance/patterns --replacement "[REDACTED]" [--repo /path/to/repo] [--yes]
+python -m tidy clean --patterns tidy/patterns --replacement "[REDACTED]" [--repo /path/to/repo] [--yes]
 ```
 
 - `--yes` / `-y`: skip the confirmation prompt.
@@ -82,7 +82,7 @@ Re-scan the local repository to confirm patterns are gone.  Optionally
 verify via the GitHub API.
 
 ```
-python -m maintenance verify --patterns maintenance/patterns [--remote] [--branches main develop] [--limit 200]
+python -m tidy verify --patterns tidy/patterns [--remote] [--branches main develop] [--limit 200]
 ```
 
 - `--remote`: also check commits via the GitHub API.
@@ -95,8 +95,8 @@ Generate a ready-to-submit GitHub Support ticket requesting cache/ghost
 commit purge.
 
 ```
-python -m maintenance ticket --commit-map /path/to/filter-repo/commit-map [--output ticket.txt]
-python -m maintenance ticket --shas abc123 def456 [--branches main] [--output ticket.txt]
+python -m tidy ticket --commit-map /path/to/filter-repo/commit-map [--output ticket.txt]
+python -m tidy ticket --shas abc123 def456 [--branches main] [--output ticket.txt]
 ```
 
 - `--shas`: provide old SHAs directly on the command line.
@@ -108,17 +108,17 @@ python -m maintenance ticket --shas abc123 def456 [--branches main] [--output ti
 
 ```bash
 # 1. Scan for matches
-python -m maintenance scan --patterns maintenance/patterns
+python -m tidy scan --patterns tidy/patterns
 
 # 2. Review the impact plan
-python -m maintenance plan --patterns maintenance/patterns --replacement "[REDACTED]"
+python -m tidy plan --patterns tidy/patterns --replacement "[REDACTED]"
 
 # 3. Execute the clean (creates backup, rewrites, force-pushes)
-python -m maintenance clean --patterns maintenance/patterns --replacement "[REDACTED]"
+python -m tidy clean --patterns tidy/patterns --replacement "[REDACTED]"
 
 # 4. Verify locally and remotely
-python -m maintenance verify --patterns maintenance/patterns --remote
+python -m tidy verify --patterns tidy/patterns --remote
 
 # 5. Generate GitHub Support ticket for cache purge
-python -m maintenance ticket --commit-map /tmp/tidy-mirror-*/repo.git/filter-repo/commit-map -o ticket.txt
+python -m tidy ticket --commit-map /tmp/tidy-mirror-*/repo.git/filter-repo/commit-map -o ticket.txt
 ```

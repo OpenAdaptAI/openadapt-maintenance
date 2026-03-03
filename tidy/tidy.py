@@ -2,15 +2,15 @@
 
 Usage::
 
-    python -m maintenance scan   --patterns maintenance/patterns
-    python -m maintenance plan   --patterns maintenance/patterns --replacement "[REDACTED]"
-    python -m maintenance clean  --patterns maintenance/patterns --replacement "[REDACTED]"
-    python -m maintenance verify --patterns maintenance/patterns
-    python -m maintenance ticket --commit-map /path/to/commit-map
+    python -m tidy scan   --patterns tidy/patterns
+    python -m tidy plan   --patterns tidy/patterns --replacement "[REDACTED]"
+    python -m tidy clean  --patterns tidy/patterns --replacement "[REDACTED]"
+    python -m tidy verify --patterns tidy/patterns
+    python -m tidy ticket --commit-map /path/to/commit-map
 
 Or via the ``tidy`` console_script (if installed)::
 
-    tidy scan --patterns maintenance/patterns
+    tidy scan --patterns tidy/patterns
 """
 
 from __future__ import annotations
