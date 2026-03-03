@@ -3,7 +3,6 @@ packages/openadapt-ml.md
 packages/openadapt-evals.md
 packages/openadapt-capture.md
 packages/openadapt-desktop.md
-packages/openadapt-flow.md
 packages/openadapt-consilium.md
 packages/openadapt-wright.md
 packages/openadapt-herald.md

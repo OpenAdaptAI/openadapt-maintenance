@@ -13,11 +13,19 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: true
 
 jobs:
-  sync:
+  sync-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -49,14 +57,22 @@ jobs:
       - name: Validate
         run: uv run python scripts/validate_docs.py
 
-      - name: Create PR with changes
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "docs: auto-sync documentation"
-          title: "docs: auto-sync documentation"
-          body: |
-            Automated documentation sync.
+      - name: Build MkDocs site
+        run: uv run mkdocs build --strict 2>&1 || uv run mkdocs build
 
-            Triggered by: ${{ github.event_name }}
-          branch: auto-docs-sync
-          delete-branch: true
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Commit updated docs source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "docs: auto-sync documentation [skip ci]"
+          git push
