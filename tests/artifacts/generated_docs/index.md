@@ -13,7 +13,6 @@ OpenAdapt is an open-source platform for GUI automation with machine learning. R
 | [openadapt-evals](packages/openadapt-evals.md) | Benchmarks and evaluation |
 | [openadapt-capture](packages/openadapt-capture.md) | Local demo recording |
 | [openadapt-desktop](packages/openadapt-desktop.md) | Desktop application |
-| [openadapt-flow](packages/openadapt-flow.md) | Workflow orchestration |
 | [openadapt-consilium](packages/openadapt-consilium.md) | Multi-LLM consensus |
 
 ### Developer Tools
