@@ -1,12 +1,21 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-03 23:01 UTC*
+> *Last updated: 2026-03-03 23:30 UTC*
+
+
+
+## OpenAdapt
+
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/OpenAdapt/pull/995) (#995) — merged 
 
 
 
 ## openadapt-ml
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-ml/pull/52) (#52) — merged 
 
 - [feat: add GRPO training module with minimal TRL bridge](https://github.com/OpenAdaptAI/openadapt-ml/pull/34) (#34) — merged 
 
@@ -22,6 +31,8 @@
 
 ## openadapt-evals
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-evals/pull/96) (#96) — merged 
 
 - [docs: add worktree safety rule to CLAUDE.md](https://github.com/OpenAdaptAI/openadapt-evals/pull/94) (#94) — merged 
 
@@ -61,12 +72,19 @@
 
 - [fix: unify fuzzy_match metrics into shared module](https://github.com/OpenAdaptAI/openadapt-evals/pull/71) (#71) — merged 
 
-- [fix: rename consilium dependency to openadapt-consilium and revert Python 3.11 requirement](https://github.com/OpenAdaptAI/openadapt-evals/pull/69) (#69) — merged 
+
+
+## openadapt-capture
+
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-capture/pull/14) (#14) — merged 
 
 
 
 ## openadapt-desktop
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-desktop/pull/4) (#4) — merged 
 
 - [fix: remove premature screenshot generation and Playwright UI tests](https://github.com/OpenAdaptAI/openadapt-desktop/pull/3) (#3) — merged 
 
@@ -78,6 +96,8 @@
 
 ## openadapt-consilium
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-consilium/pull/8) (#8) — merged 
 
 - [fix: rename PyPI package to openadapt-consilium](https://github.com/OpenAdaptAI/openadapt-consilium/pull/6) (#6) — merged 
 
@@ -94,6 +114,8 @@
 ## openadapt-wright
 
 
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-wright/pull/21) (#21) — merged 
+
 - [fix: harden token security, add guardrails, fix 0-test loop](https://github.com/OpenAdaptAI/openadapt-wright/pull/19) (#19) — merged 
 
 - [fix: security and correctness fixes for worker and bot](https://github.com/OpenAdaptAI/openadapt-wright/pull/17) (#17) — merged 
@@ -106,6 +128,8 @@
 
 ## openadapt-herald
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-herald/pull/7) (#7) — merged 
 
 - [fix: sanitize local paths before public release](https://github.com/OpenAdaptAI/openadapt-herald/pull/6) (#6) — merged 
 
@@ -121,6 +145,8 @@
 
 ## openadapt-crier
 
+
+- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-crier/pull/3) (#3) — merged 
 
 - [fix: add LICENSE and README for public release](https://github.com/OpenAdaptAI/openadapt-crier/pull/2) (#2) — merged 
 
