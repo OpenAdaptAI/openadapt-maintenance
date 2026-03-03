@@ -1,0 +1,62 @@
+name: Sync Documentation
+
+on:
+  repository_dispatch:
+    types: [repo-updated]
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday 9 AM UTC
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repo to update (or "all" for full rebuild)'
+        default: 'all'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Install dependencies
+        run: uv sync --extra llm
+
+      - name: Sync READMEs
+        run: uv run python scripts/sync_readmes.py
+
+      - name: Aggregate changelogs
+        run: uv run python scripts/aggregate_changelog.py
+
+      - name: Generate What's New
+        run: uv run python scripts/generate_whats_new.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build architecture overview
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: uv run python scripts/build_architecture.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Validate
+        run: uv run python scripts/validate_docs.py
+
+      - name: Create PR with changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "docs: auto-sync documentation"
+          title: "docs: auto-sync documentation"
+          body: |
+            Automated documentation sync.
+
+            Triggered by: ${{ github.event_name }}
+          branch: auto-docs-sync
+          delete-branch: true

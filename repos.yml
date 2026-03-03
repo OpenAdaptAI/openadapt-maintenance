@@ -1,0 +1,60 @@
+repos:
+  - name: OpenAdapt
+    github: OpenAdaptAI/OpenAdapt
+    category: core
+    doc_page: packages/openadapt.md
+    changelog: true
+
+  - name: openadapt-ml
+    github: OpenAdaptAI/openadapt-ml
+    category: core
+    doc_page: packages/openadapt-ml.md
+    changelog: true
+
+  - name: openadapt-evals
+    github: OpenAdaptAI/openadapt-evals
+    category: core
+    doc_page: packages/openadapt-evals.md
+    changelog: true
+
+  - name: openadapt-capture
+    github: OpenAdaptAI/openadapt-capture
+    category: core
+    doc_page: packages/openadapt-capture.md
+    changelog: true
+
+  - name: openadapt-desktop
+    github: OpenAdaptAI/openadapt-desktop
+    category: core
+    doc_page: packages/openadapt-desktop.md
+    changelog: true
+
+  - name: openadapt-flow
+    github: OpenAdaptAI/openadapt-flow
+    category: core
+    doc_page: packages/openadapt-flow.md
+    changelog: true
+
+  - name: openadapt-consilium
+    github: OpenAdaptAI/openadapt-consilium
+    category: core
+    doc_page: packages/openadapt-consilium.md
+    changelog: true
+
+  - name: openadapt-wright
+    github: OpenAdaptAI/openadapt-wright
+    category: devtools
+    doc_page: packages/openadapt-wright.md
+    changelog: true
+
+  - name: openadapt-herald
+    github: OpenAdaptAI/openadapt-herald
+    category: devtools
+    doc_page: packages/openadapt-herald.md
+    changelog: true
+
+  - name: openadapt-crier
+    github: OpenAdaptAI/openadapt-crier
+    category: devtools
+    doc_page: packages/openadapt-crier.md
+    changelog: true

@@ -1,0 +1,14 @@
+Generate an architecture overview for the OpenAdapt ecosystem based on the following package READMEs.
+
+RULES:
+- Only document what exists in the READMEs. Never invent features or APIs.
+- Keep the tone direct and technical. No marketing language.
+- Include a text-based dependency diagram showing how packages relate.
+- Group packages into: Core Platform, Evaluation, Developer Tools.
+- For each package, write 1-2 sentences describing its role.
+- Output valid Markdown.
+
+PACKAGE READMEs:
+{readmes_text}
+
+OUTPUT: The architecture overview in Markdown. Only output the Markdown, no preamble.

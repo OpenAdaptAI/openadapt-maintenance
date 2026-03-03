@@ -1,0 +1,20 @@
+# What's New
+
+> *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
+> *Last updated: {{ generated_at }}*
+
+{% if summary %}
+{{ summary }}
+{% else %}
+{% for repo_name, prs in repos.items() %}
+## {{ repo_name }}
+
+{% for pr in prs %}
+- [{{ pr.title }}]({{ pr.url }}) (#{{ pr.number }}) — merged {{ pr.merged_at }}
+{% endfor %}
+
+{% endfor %}
+{% if not repos %}
+No merged PRs in the last {{ days }} days.
+{% endif %}
+{% endif %}
