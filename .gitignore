@@ -5,3 +5,6 @@ site/
 _site_check/
 *.swp
 .env
+
+# Tidy tool patterns (contains sensitive strings)
+tidy/patterns
