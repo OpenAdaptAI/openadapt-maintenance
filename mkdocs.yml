@@ -40,7 +40,6 @@ nav:
     - openadapt-evals: packages/openadapt-evals.md
     - openadapt-capture: packages/openadapt-capture.md
     - openadapt-desktop: packages/openadapt-desktop.md
-    - openadapt-flow: packages/openadapt-flow.md
     - openadapt-consilium: packages/openadapt-consilium.md
     - openadapt-wright: packages/openadapt-wright.md
     - openadapt-herald: packages/openadapt-herald.md

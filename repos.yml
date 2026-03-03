@@ -29,12 +29,6 @@ repos:
     doc_page: packages/openadapt-desktop.md
     changelog: true
 
-  - name: openadapt-flow
-    github: OpenAdaptAI/openadapt-flow
-    category: core
-    doc_page: packages/openadapt-flow.md
-    changelog: true
-
   - name: openadapt-consilium
     github: OpenAdaptAI/openadapt-consilium
     category: core

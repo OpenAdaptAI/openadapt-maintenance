@@ -1,130 +1,29 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-03 21:03 UTC*
-
-
-
-## openadapt-ml
-
-
-- [feat: add GRPO training module with minimal TRL bridge](https://github.com/OpenAdaptAI/openadapt-ml/pull/34) (#34) — merged 
-
-- [fix(docs): require conventional commit format for PR titles](https://github.com/OpenAdaptAI/openadapt-ml/pull/32) (#32) — merged 
-
-- [Align PolicyAgent prompt with training format](https://github.com/OpenAdaptAI/openadapt-ml/pull/31) (#31) — merged 
-
-- [docs: enforce branch protection rules](https://github.com/OpenAdaptAI/openadapt-ml/pull/30) (#30) — merged 
-
-- [feat(training): add SFT demo conversion pipeline](https://github.com/OpenAdaptAI/openadapt-ml/pull/29) (#29) — merged 
+> *Last updated: 2026-03-03 21:32 UTC*
 
 
 
 ## openadapt-evals
 
 
-- [docs: add worktree safety rule to CLAUDE.md](https://github.com/OpenAdaptAI/openadapt-evals/pull/94) (#94) — merged 
+- [feat: add new evaluation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/68) (#68) — merged 
 
-- [feat: add observe_pil() convenience method for PIL image output](https://github.com/OpenAdaptAI/openadapt-evals/pull/93) (#93) — merged 
+- [fix: repr escaping in demo format](https://github.com/OpenAdaptAI/openadapt-evals/pull/83) (#83) — merged 
 
-- [feat(agent): add closed-loop demo-conditioned controller](https://github.com/OpenAdaptAI/openadapt-evals/pull/92) (#92) — merged 
-
-- [fix: add direct pixel path for pixel_action bypassing element routing](https://github.com/OpenAdaptAI/openadapt-evals/pull/91) (#91) — merged 
-
-- [docs: add EC2 setup guide for WAA deployment](https://github.com/OpenAdaptAI/openadapt-evals/pull/90) (#90) — merged 
-
-- [feat: add TaskVerifierRegistry for custom task verification](https://github.com/OpenAdaptAI/openadapt-evals/pull/89) (#89) — merged 
-
-- [fix: address review findings in verl-agent adapter](https://github.com/OpenAdaptAI/openadapt-evals/pull/88) (#88) — merged 
-
-- [docs: switch benchmark viewer animation to WebP with compact layout](https://github.com/OpenAdaptAI/openadapt-evals/pull/86) (#86) — merged 
-
-- [feat: add VAGEN/verl-agent environment adapter for VLM RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/84) (#84) — merged 
-
-- [fix(agent): replace manual string escaping with repr() and fix CU agent bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/83) (#83) — merged 
-
-- [docs: update README with recent features](https://github.com/OpenAdaptAI/openadapt-evals/pull/82) (#82) — merged 
-
-- [feat: add self-contained GRPO training example script](https://github.com/OpenAdaptAI/openadapt-evals/pull/81) (#81) — merged 
-
-- [docs: document AWS SSO as recommended auth method](https://github.com/OpenAdaptAI/openadapt-evals/pull/80) (#80) — merged 
-
-- [fix: harden eval pipeline and type command escaping](https://github.com/OpenAdaptAI/openadapt-evals/pull/79) (#79) — merged 
-
-- [feat: add 4-layer WAA probe for per-layer diagnostics](https://github.com/OpenAdaptAI/openadapt-evals/pull/75) (#75) — merged 
-
-- [fix: add coordinate clamping and drag safety to prevent fail-safe triggers](https://github.com/OpenAdaptAI/openadapt-evals/pull/74) (#74) — merged 
-
-- [feat: add RL environment wrapper for GRPO training](https://github.com/OpenAdaptAI/openadapt-evals/pull/73) (#73) — merged 
-
-- [feat: add smoke-test-aws CLI command with full lifecycle test](https://github.com/OpenAdaptAI/openadapt-evals/pull/72) (#72) — merged 
-
-- [fix: unify fuzzy_match metrics into shared module](https://github.com/OpenAdaptAI/openadapt-evals/pull/71) (#71) — merged 
-
-- [fix: rename consilium dependency to openadapt-consilium and revert Python 3.11 requirement](https://github.com/OpenAdaptAI/openadapt-evals/pull/69) (#69) — merged 
+- [feat: dual GRPO backend (standalone + verl)](https://github.com/OpenAdaptAI/openadapt-ml/pull/51) (#51) — merged 
 
 
 
-## openadapt-desktop
+## openadapt-ml
 
 
-- [fix: remove premature screenshot generation and Playwright UI tests](https://github.com/OpenAdaptAI/openadapt-desktop/pull/3) (#3) — merged 
+- [feat: add new evaluation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/68) (#68) — merged 
 
-- [feat: add README, screenshots, e2e tests, and automated screenshot generation](https://github.com/OpenAdaptAI/openadapt-desktop/pull/2) (#2) — merged 
+- [fix: repr escaping in demo format](https://github.com/OpenAdaptAI/openadapt-evals/pull/83) (#83) — merged 
 
-- [fix: add hatch build config, fix lint errors and CI workflow](https://github.com/OpenAdaptAI/openadapt-desktop/pull/1) (#1) — merged 
-
-
-
-## openadapt-consilium
-
-
-- [fix: rename PyPI package to openadapt-consilium](https://github.com/OpenAdaptAI/openadapt-consilium/pull/6) (#6) — merged 
-
-- [fix: resolve lint errors and restore version to 0.3.0](https://github.com/OpenAdaptAI/openadapt-consilium/pull/4) (#4) — merged 
-
-- [ci: add release automation and CI workflows](https://github.com/OpenAdaptAI/openadapt-consilium/pull/3) (#3) — merged 
-
-- [fix: update URLs for repo rename](https://github.com/OpenAdaptAI/openadapt-consilium/pull/2) (#2) — merged 
-
-- [feat: auto-discover latest models by filtering provider API responses](https://github.com/OpenAdaptAI/openadapt-consilium/pull/1) (#1) — merged 
-
-
-
-## openadapt-wright
-
-
-- [fix: harden token security, add guardrails, fix 0-test loop](https://github.com/OpenAdaptAI/openadapt-wright/pull/19) (#19) — merged 
-
-- [fix: security and correctness fixes for worker and bot](https://github.com/OpenAdaptAI/openadapt-wright/pull/17) (#17) — merged 
-
-- [fix: update URLs for repo rename](https://github.com/OpenAdaptAI/openadapt-wright/pull/16) (#16) — merged 
-
-- [feat: implement worker core, tests, bot, CI/CD, and Dockerfile](https://github.com/OpenAdaptAI/openadapt-wright/pull/15) (#15) — merged 
-
-
-
-## openadapt-herald
-
-
-- [fix: sanitize local paths before public release](https://github.com/OpenAdaptAI/openadapt-herald/pull/6) (#6) — merged 
-
-- [fix: rename consilium dependency to openadapt-consilium and revert Python 3.11 requirement](https://github.com/OpenAdaptAI/openadapt-herald/pull/5) (#5) — merged 
-
-- [fix: update consilium URL for repo rename](https://github.com/OpenAdaptAI/openadapt-herald/pull/3) (#3) — merged 
-
-- [fix(ci): use uv sync instead of uv pip install --system](https://github.com/OpenAdaptAI/openadapt-herald/pull/2) (#2) — merged 
-
-- [fix: update references for repo rename to openadapt-herald](https://github.com/OpenAdaptAI/openadapt-herald/pull/1) (#1) — merged 
-
-
-
-## openadapt-crier
-
-
-- [fix: add LICENSE and README for public release](https://github.com/OpenAdaptAI/openadapt-crier/pull/2) (#2) — merged 
-
-- [fix: update herald dependency path for repo rename](https://github.com/OpenAdaptAI/openadapt-crier/pull/1) (#1) — merged 
+- [feat: dual GRPO backend (standalone + verl)](https://github.com/OpenAdaptAI/openadapt-ml/pull/51) (#51) — merged 
 
 
 
