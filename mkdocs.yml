@@ -1,0 +1,48 @@
+site_name: OpenAdapt Documentation
+site_url: https://docs.openadapt.ai
+repo_url: https://github.com/OpenAdaptAI/openadapt-maintenance
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - What's New: whats-new.md
+  - Packages:
+    - OpenAdapt: packages/openadapt.md
+    - openadapt-ml: packages/openadapt-ml.md
+    - openadapt-evals: packages/openadapt-evals.md
+    - openadapt-capture: packages/openadapt-capture.md
+    - openadapt-desktop: packages/openadapt-desktop.md
+    - openadapt-flow: packages/openadapt-flow.md
+    - openadapt-consilium: packages/openadapt-consilium.md
+    - openadapt-wright: packages/openadapt-wright.md
+    - openadapt-herald: packages/openadapt-herald.md
+    - openadapt-crier: packages/openadapt-crier.md
+  - Changelog: changelog.md

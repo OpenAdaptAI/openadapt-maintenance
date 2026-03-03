@@ -1,0 +1,15 @@
+Summarize the following merged pull requests across the OpenAdapt ecosystem into a readable "What's New" section.
+
+RULES:
+- Group by package.
+- Use one sentence per PR. Link to the PR using markdown.
+- Do not editorialize or add opinions.
+- If a PR title is clear enough, use it as-is with a brief clarification if needed.
+- Use past tense ("Added", "Fixed", "Updated").
+- Output valid Markdown with ## headings per package.
+- If there are no PRs, output "No updates this week."
+
+MERGED PRs (last {days} days):
+{prs_text}
+
+OUTPUT: The "What's New" content in Markdown. Only output the Markdown, no preamble.

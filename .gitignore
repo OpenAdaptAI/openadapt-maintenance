@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+site/
+_site_check/
+*.swp
+.env

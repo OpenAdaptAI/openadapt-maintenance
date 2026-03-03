@@ -1,0 +1,27 @@
+[project]
+name = "openadapt-maintenance"
+version = "0.1.0"
+description = "Automated documentation generator for the OpenAdapt ecosystem"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs-material>=9.5",
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+llm = [
+    "anthropic>=0.40",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.12",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
