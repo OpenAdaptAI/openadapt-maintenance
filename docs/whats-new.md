@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 05:30 UTC*
+> *Last updated: 2026-03-04 16:10 UTC*
 
 
 
@@ -38,6 +38,10 @@
 ## openadapt-evals
 
 
+- [fix: prefer multilevel demo files over plain .txt in eval scripts](https://github.com/OpenAdaptAI/openadapt-evals/pull/103) (#103) — merged 
+
+- [fix: condense multilevel demo PLAN from 13 to 5 phases](https://github.com/OpenAdaptAI/openadapt-evals/pull/102) (#102) — merged 
+
 - [fix: correct training entry point, env config, and GPU defaults for VAGEN](https://github.com/OpenAdaptAI/openadapt-evals/pull/101) (#101) — merged 
 
 - [docs: add AWS spot instance cost analysis for GPU training](https://github.com/OpenAdaptAI/openadapt-evals/pull/100) (#100) — merged 
@@ -73,10 +77,6 @@
 - [fix(agent): replace manual string escaping with repr() and fix CU agent bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/83) (#83) — merged 
 
 - [docs: update README with recent features](https://github.com/OpenAdaptAI/openadapt-evals/pull/82) (#82) — merged 
-
-- [feat: add self-contained GRPO training example script](https://github.com/OpenAdaptAI/openadapt-evals/pull/81) (#81) — merged 
-
-- [docs: document AWS SSO as recommended auth method](https://github.com/OpenAdaptAI/openadapt-evals/pull/80) (#80) — merged 
 
 
 
