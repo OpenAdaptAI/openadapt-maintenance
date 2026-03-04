@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 04:09 UTC*
+> *Last updated: 2026-03-04 04:10 UTC*
 
 
 
@@ -82,6 +82,8 @@
 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-capture/pull/14) (#14) — merged 
+
+- [feat: conditional window capture + recording profiling with auto-wormhole](https://github.com/OpenAdaptAI/openadapt-capture/pull/12) (#12) — merged 
 
 
 
