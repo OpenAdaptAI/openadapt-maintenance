@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-03 23:30 UTC*
+> *Last updated: 2026-03-04 00:32 UTC*
 
 
 
@@ -22,10 +22,6 @@
 - [fix(docs): require conventional commit format for PR titles](https://github.com/OpenAdaptAI/openadapt-ml/pull/32) (#32) — merged 
 
 - [Align PolicyAgent prompt with training format](https://github.com/OpenAdaptAI/openadapt-ml/pull/31) (#31) — merged 
-
-- [docs: enforce branch protection rules](https://github.com/OpenAdaptAI/openadapt-ml/pull/30) (#30) — merged 
-
-- [feat(training): add SFT demo conversion pipeline](https://github.com/OpenAdaptAI/openadapt-ml/pull/29) (#29) — merged 
 
 
 
@@ -83,6 +79,8 @@
 
 ## openadapt-desktop
 
+
+- [feat: implement end-to-end engine with CLI](https://github.com/OpenAdaptAI/openadapt-desktop/pull/5) (#5) — merged 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-desktop/pull/4) (#4) — merged 
 
