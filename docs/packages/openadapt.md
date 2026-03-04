@@ -2,7 +2,7 @@
 
 [![GitHub](https://img.shields.io/github/stars/OpenAdaptAI/OpenAdapt?style=social)](https://github.com/OpenAdaptAI/OpenAdapt)
 
-> *Auto-generated from [OpenAdaptAI/OpenAdapt](https://github.com/OpenAdaptAI/OpenAdapt). Last synced: 2026-03-04 02:19 UTC*
+> *Auto-generated from [OpenAdaptAI/OpenAdapt](https://github.com/OpenAdaptAI/OpenAdapt). Last synced: 2026-03-04 02:21 UTC*
 
 ---
 
@@ -178,7 +178,7 @@ Zero-shot VLMs fail on GUI tasks not due to lack of capability, but due to **amb
 
 | | No Retrieval | With Retrieval |
 |---|---|---|
-| **No Fine-tuning** | 46.7% (zero-shot baseline) | **100%** (validated, n=45) |
+| **No Fine-tuning** | 46.7% (zero-shot baseline) | **100%** first-action (n=45, shared entry point) |
 | **Fine-tuning** | Standard SFT (baseline) | **Demo-conditioned FT** (planned) |
 
 The bottom-right cell is OpenAdapt's unique value: training models to **use** demonstrations they haven't seen before, combining retrieval with fine-tuning for maximum accuracy. Phase 2 (retrieval-only prompting) is validated; Phase 3 (demo-conditioned fine-tuning) is in progress.
