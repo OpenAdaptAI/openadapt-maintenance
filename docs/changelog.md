@@ -51,6 +51,11 @@
 - **[v0.2.0](https://github.com/OpenAdaptAI/openadapt-capture/releases/tag/v0.2.0)** (2026-01-29)
   ## v0.2.0 (2026-01-29)
 
+## openadapt-desktop
+
+- **[v0.1.0](https://github.com/OpenAdaptAI/openadapt-desktop/releases/tag/v0.1.0)** (2026-03-04)
+  ## First release
+
 ## openadapt-consilium
 
 - **[v0.4.0](https://github.com/OpenAdaptAI/openadapt-consilium/releases/tag/v0.4.0)** (2026-03-03)
