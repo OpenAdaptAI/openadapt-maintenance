@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 03:55 UTC*
+> *Last updated: 2026-03-04 04:09 UTC*
 
 
 
@@ -35,6 +35,8 @@
 
 ## openadapt-evals
 
+
+- [fix(controller): prevent plan step drift and reduce VLM false negatives](https://github.com/OpenAdaptAI/openadapt-evals/pull/97) (#97) — merged 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-evals/pull/96) (#96) — merged 
 
@@ -73,8 +75,6 @@
 - [fix: add coordinate clamping and drag safety to prevent fail-safe triggers](https://github.com/OpenAdaptAI/openadapt-evals/pull/74) (#74) — merged 
 
 - [feat: add RL environment wrapper for GRPO training](https://github.com/OpenAdaptAI/openadapt-evals/pull/73) (#73) — merged 
-
-- [feat: add smoke-test-aws CLI command with full lifecycle test](https://github.com/OpenAdaptAI/openadapt-evals/pull/72) (#72) — merged 
 
 
 
