@@ -2,7 +2,7 @@
 
 [![GitHub](https://img.shields.io/github/stars/OpenAdaptAI/openadapt-evals?style=social)](https://github.com/OpenAdaptAI/openadapt-evals)
 
-> *Auto-generated from [OpenAdaptAI/openadapt-evals](https://github.com/OpenAdaptAI/openadapt-evals). Last synced: 2026-03-04 04:11 UTC*
+> *Auto-generated from [OpenAdaptAI/openadapt-evals](https://github.com/OpenAdaptAI/openadapt-evals). Last synced: 2026-03-04 04:33 UTC*
 
 ---
 
@@ -250,6 +250,25 @@ LOCAL MACHINE                          CLOUD VM (Azure or AWS, Ubuntu)
 Both backends use the same `VMProvider` protocol. Pass `--cloud azure` (default) or `--cloud aws` to any pool command. AWS requires `m5.metal` instances ($4.61/hr) for KVM/QEMU nested virtualization; Azure uses `Standard_D8ds_v5` ($0.38/hr).
 
 ![Windows 11 on AWS EC2](https://raw.githubusercontent.com/OpenAdaptAI/openadapt-evals/main/docs/aws-waa-windows-desktop.png)
+
+### UNIX Socket Bridge (Docker Port 5050 Workaround)
+
+The WAA Docker container runs QEMU with `--cap-add NET_ADMIN` for TAP networking, which breaks Docker's standard port forwarding for port 5050 (`evaluate_server.py`). The workaround is a two-stage socat proxy using a UNIX socket:
+
+```bash
+# Stage 1: Bridge container network namespace to a UNIX socket
+CONTAINER_PID=$(docker inspect --format '{{.State.Pid}}' <container_name>)
+nsenter -t $CONTAINER_PID -n socat UNIX-LISTEN:/tmp/waa-bridge.sock,fork TCP:localhost:5050
+
+# Stage 2: Expose the UNIX socket as a TCP port on the VM host
+socat TCP-LISTEN:5051,fork,reuseaddr UNIX-CONNECT:/tmp/waa-bridge.sock
+```
+
+This makes `VM_HOST:5051` forward to container port 5050. Port 5000 (WAA Flask API) uses standard Docker port forwarding and works normally.
+
+**After a container restart**, remove the stale socket (`rm -f /tmp/waa-bridge.sock`) and re-run both stages with the new container PID.
+
+For the full networking architecture, SSH tunnel setup, and data flow diagrams, see [docs/gpu_e2e_validation/architecture.md](docs/gpu_e2e_validation/architecture.md).
 
 ## WAA Task Setup & App Management
 

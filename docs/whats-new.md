@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 04:11 UTC*
+> *Last updated: 2026-03-04 04:33 UTC*
 
 
 
@@ -21,6 +21,8 @@
 ## openadapt-ml
 
 
+- [fix: lower PyTorch minimum to 2.8.0 for vLLM compatibility](https://github.com/OpenAdaptAI/openadapt-ml/pull/53) (#53) — merged 
+
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-ml/pull/52) (#52) — merged 
 
 - [feat: add dual training backend support (standalone + verl-agent)](https://github.com/OpenAdaptAI/openadapt-ml/pull/51) (#51) — merged 
@@ -35,6 +37,14 @@
 
 ## openadapt-evals
 
+
+- [fix: correct training entry point, env config, and GPU defaults for VAGEN](https://github.com/OpenAdaptAI/openadapt-evals/pull/101) (#101) — merged 
+
+- [docs: add AWS spot instance cost analysis for GPU training](https://github.com/OpenAdaptAI/openadapt-evals/pull/100) (#100) — merged 
+
+- [docs: add first training run runbook with pre-flight checklist](https://github.com/OpenAdaptAI/openadapt-evals/pull/99) (#99) — merged 
+
+- [docs: add UNIX socket bridge runbook](https://github.com/OpenAdaptAI/openadapt-evals/pull/98) (#98) — merged 
 
 - [fix(controller): prevent plan step drift and reduce VLM false negatives](https://github.com/OpenAdaptAI/openadapt-evals/pull/97) (#97) — merged 
 
@@ -67,14 +77,6 @@
 - [feat: add self-contained GRPO training example script](https://github.com/OpenAdaptAI/openadapt-evals/pull/81) (#81) — merged 
 
 - [docs: document AWS SSO as recommended auth method](https://github.com/OpenAdaptAI/openadapt-evals/pull/80) (#80) — merged 
-
-- [fix: harden eval pipeline and type command escaping](https://github.com/OpenAdaptAI/openadapt-evals/pull/79) (#79) — merged 
-
-- [feat: add 4-layer WAA probe for per-layer diagnostics](https://github.com/OpenAdaptAI/openadapt-evals/pull/75) (#75) — merged 
-
-- [fix: add coordinate clamping and drag safety to prevent fail-safe triggers](https://github.com/OpenAdaptAI/openadapt-evals/pull/74) (#74) — merged 
-
-- [feat: add RL environment wrapper for GRPO training](https://github.com/OpenAdaptAI/openadapt-evals/pull/73) (#73) — merged 
 
 
 
