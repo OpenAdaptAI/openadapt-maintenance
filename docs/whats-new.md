@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 02:19 UTC*
+> *Last updated: 2026-03-04 02:21 UTC*
 
 
 
 ## OpenAdapt
 
+
+- [fix: add inline caveat to 100% accuracy claim in README table](https://github.com/OpenAdaptAI/OpenAdapt/pull/997) (#997) — merged 
 
 - [feat: Update README.md by combining the best changes from branches](https://github.com/OpenAdaptAI/OpenAdapt/pull/996) (#996) — merged 
 
@@ -20,6 +22,8 @@
 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-ml/pull/52) (#52) — merged 
+
+- [feat: add dual training backend support (standalone + verl-agent)](https://github.com/OpenAdaptAI/openadapt-ml/pull/51) (#51) — merged 
 
 - [feat: add GRPO training module with minimal TRL bridge](https://github.com/OpenAdaptAI/openadapt-ml/pull/34) (#34) — merged 
 
