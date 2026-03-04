@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 17:38 UTC*
+> *Last updated: 2026-03-04 17:41 UTC*
 
 
 
@@ -40,6 +40,8 @@
 
 - [docs: update AWS nested virtualization info for Feb 2026](https://github.com/OpenAdaptAI/openadapt-evals/pull/105) (#105) — merged 
 
+- [feat: add spot instance support to AWS VM creation](https://github.com/OpenAdaptAI/openadapt-evals/pull/104) (#104) — merged 
+
 - [fix: prefer multilevel demo files over plain .txt in eval scripts](https://github.com/OpenAdaptAI/openadapt-evals/pull/103) (#103) — merged 
 
 - [fix: condense multilevel demo PLAN from 13 to 5 phases](https://github.com/OpenAdaptAI/openadapt-evals/pull/102) (#102) — merged 
@@ -75,8 +77,6 @@
 - [docs: switch benchmark viewer animation to WebP with compact layout](https://github.com/OpenAdaptAI/openadapt-evals/pull/86) (#86) — merged 
 
 - [feat: add VAGEN/verl-agent environment adapter for VLM RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/84) (#84) — merged 
-
-- [fix(agent): replace manual string escaping with repr() and fix CU agent bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/83) (#83) — merged 
 
 
 
