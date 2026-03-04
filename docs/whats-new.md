@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 01:19 UTC*
+> *Last updated: 2026-03-04 01:22 UTC*
 
 
 
 ## OpenAdapt
 
+
+- [feat: Update README.md by combining the best changes from branches](https://github.com/OpenAdaptAI/OpenAdapt/pull/996) (#996) — merged 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/OpenAdapt/pull/995) (#995) — merged 
 
