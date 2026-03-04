@@ -53,6 +53,8 @@
 
 ## openadapt-desktop
 
+- **[v0.1.1](https://github.com/OpenAdaptAI/openadapt-desktop/releases/tag/v0.1.1)** (2026-03-04)
+  ## v0.1.1 (2026-03-04)
 - **[v0.1.0](https://github.com/OpenAdaptAI/openadapt-desktop/releases/tag/v0.1.0)** (2026-03-04)
   ## First release
 
