@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 02:28 UTC*
+> *Last updated: 2026-03-04 03:27 UTC*
 
 
 
@@ -87,6 +87,8 @@
 
 ## openadapt-desktop
 
+
+- [ci: add automated release workflow with python-semantic-release](https://github.com/OpenAdaptAI/openadapt-desktop/pull/6) (#6) — merged 
 
 - [feat: implement end-to-end engine with CLI](https://github.com/OpenAdaptAI/openadapt-desktop/pull/5) (#5) — merged 
 
