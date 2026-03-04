@@ -2,13 +2,25 @@
 
 [![GitHub](https://img.shields.io/github/stars/OpenAdaptAI/openadapt-wright?style=social)](https://github.com/OpenAdaptAI/openadapt-wright)
 
-> *Auto-generated from [OpenAdaptAI/openadapt-wright](https://github.com/OpenAdaptAI/openadapt-wright). Last synced: 2026-03-04 00:32 UTC*
+> *Auto-generated from [OpenAdaptAI/openadapt-wright](https://github.com/OpenAdaptAI/openadapt-wright). Last synced: 2026-03-04 01:19 UTC*
 
 ---
 
 # Wright
 
 Wright is a generalized dev automation platform that takes task descriptions, uses the Claude Agent SDK to generate code, runs tests iteratively (the Ralph Loop pattern), and creates pull requests -- with a Telegram bot for human-in-the-loop approval.
+
+## Demo
+
+Submit a task via Telegram, watch Wright clone the repo, edit code, run tests, and create a PR -- all automated.
+
+### Desktop
+
+![Desktop demo — task submission, progress, completion, and GitHub PR](docs/screenshots/demo-desktop.webp)
+
+### Mobile
+
+![Mobile demo — task submission, progress, completion, and PR review](docs/screenshots/demo-mobile.webp)
 
 ## Test Results
 

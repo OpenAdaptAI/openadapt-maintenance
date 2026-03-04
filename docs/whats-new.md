@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 00:32 UTC*
+> *Last updated: 2026-03-04 01:19 UTC*
 
 
 
@@ -113,6 +113,8 @@
 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-wright/pull/21) (#21) — merged 
+
+- [feat: verbose/quiet toggle, PR revision support, demo screenshots, plans](https://github.com/OpenAdaptAI/openadapt-wright/pull/20) (#20) — merged 
 
 - [fix: harden token security, add guardrails, fix 0-test loop](https://github.com/OpenAdaptAI/openadapt-wright/pull/19) (#19) — merged 
 
