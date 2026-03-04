@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 03:48 UTC*
+> *Last updated: 2026-03-04 03:55 UTC*
 
 
 
@@ -52,6 +52,8 @@
 
 - [fix: address review findings in verl-agent adapter](https://github.com/OpenAdaptAI/openadapt-evals/pull/88) (#88) — merged 
 
+- [feat: add GPU training automation for verl-agent E2E workflow](https://github.com/OpenAdaptAI/openadapt-evals/pull/87) (#87) — merged 
+
 - [docs: switch benchmark viewer animation to WebP with compact layout](https://github.com/OpenAdaptAI/openadapt-evals/pull/86) (#86) — merged 
 
 - [feat: add VAGEN/verl-agent environment adapter for VLM RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/84) (#84) — merged 
@@ -73,8 +75,6 @@
 - [feat: add RL environment wrapper for GRPO training](https://github.com/OpenAdaptAI/openadapt-evals/pull/73) (#73) — merged 
 
 - [feat: add smoke-test-aws CLI command with full lifecycle test](https://github.com/OpenAdaptAI/openadapt-evals/pull/72) (#72) — merged 
-
-- [fix: unify fuzzy_match metrics into shared module](https://github.com/OpenAdaptAI/openadapt-evals/pull/71) (#71) — merged 
 
 
 
