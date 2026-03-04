@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 17:41 UTC*
+> *Last updated: 2026-03-04 20:22 UTC*
 
 
 
@@ -37,6 +37,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add clean-desktop mode for deterministic WAA parity](https://github.com/OpenAdaptAI/openadapt-evals/pull/106) (#106) — merged 
 
 - [docs: update AWS nested virtualization info for Feb 2026](https://github.com/OpenAdaptAI/openadapt-evals/pull/105) (#105) — merged 
 
@@ -75,8 +77,6 @@
 - [feat: add GPU training automation for verl-agent E2E workflow](https://github.com/OpenAdaptAI/openadapt-evals/pull/87) (#87) — merged 
 
 - [docs: switch benchmark viewer animation to WebP with compact layout](https://github.com/OpenAdaptAI/openadapt-evals/pull/86) (#86) — merged 
-
-- [feat: add VAGEN/verl-agent environment adapter for VLM RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/84) (#84) — merged 
 
 
 
