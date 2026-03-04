@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 03:27 UTC*
+> *Last updated: 2026-03-04 03:47 UTC*
 
 
 
@@ -87,6 +87,8 @@
 
 ## openadapt-desktop
 
+
+- [fix: replace deprecated macos-13 runner with macos-14](https://github.com/OpenAdaptAI/openadapt-desktop/pull/7) (#7) — merged 
 
 - [ci: add automated release workflow with python-semantic-release](https://github.com/OpenAdaptAI/openadapt-desktop/pull/6) (#6) — merged 
 
