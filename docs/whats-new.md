@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 04:35 UTC*
+> *Last updated: 2026-03-04 05:29 UTC*
 
 
 
@@ -91,6 +91,8 @@
 
 ## openadapt-desktop
 
+
+- [feat: add openadapt doctor command and fix audit/wormhole bugs](https://github.com/OpenAdaptAI/openadapt-desktop/pull/8) (#8) — merged 
 
 - [fix: replace deprecated macos-13 runner with macos-14](https://github.com/OpenAdaptAI/openadapt-desktop/pull/7) (#7) — merged 
 
