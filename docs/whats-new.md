@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-04 20:23 UTC*
+> *Last updated: 2026-03-05 20:02 UTC*
 
 
 
@@ -29,14 +29,12 @@
 
 - [feat: add GRPO training module with minimal TRL bridge](https://github.com/OpenAdaptAI/openadapt-ml/pull/34) (#34) — merged 
 
-- [fix(docs): require conventional commit format for PR titles](https://github.com/OpenAdaptAI/openadapt-ml/pull/32) (#32) — merged 
-
-- [Align PolicyAgent prompt with training format](https://github.com/OpenAdaptAI/openadapt-ml/pull/31) (#31) — merged 
-
 
 
 ## openadapt-evals
 
+
+- [feat: instrument evals usage events via openadapt-telemetry](https://github.com/OpenAdaptAI/openadapt-evals/pull/108) (#108) — merged 
 
 - [feat: add clean-desktop mode for deterministic WAA parity](https://github.com/OpenAdaptAI/openadapt-evals/pull/106) (#106) — merged 
 
@@ -75,8 +73,6 @@
 - [fix: address review findings in verl-agent adapter](https://github.com/OpenAdaptAI/openadapt-evals/pull/88) (#88) — merged 
 
 - [feat: add GPU training automation for verl-agent E2E workflow](https://github.com/OpenAdaptAI/openadapt-evals/pull/87) (#87) — merged 
-
-- [docs: switch benchmark viewer animation to WebP with compact layout](https://github.com/OpenAdaptAI/openadapt-evals/pull/86) (#86) — merged 
 
 
 
