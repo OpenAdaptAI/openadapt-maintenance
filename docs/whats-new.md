@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-06 20:39 UTC*
+> *Last updated: 2026-03-06 21:01 UTC*
 
 
 
@@ -33,6 +33,10 @@
 
 ## openadapt-evals
 
+
+- [fix: search all LibreOffice profile dirs for recovery cleanup](https://github.com/OpenAdaptAI/openadapt-evals/pull/112) (#112) — merged 
+
+- [fix: remove stale health-gate args and add done-gate passthrough in core4_eval.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/111) (#111) — merged 
 
 - [feat: add done-gate to prevent premature task completion](https://github.com/OpenAdaptAI/openadapt-evals/pull/110) (#110) — merged 
 
@@ -69,10 +73,6 @@
 - [feat: add observe_pil() convenience method for PIL image output](https://github.com/OpenAdaptAI/openadapt-evals/pull/93) (#93) — merged 
 
 - [feat(agent): add closed-loop demo-conditioned controller](https://github.com/OpenAdaptAI/openadapt-evals/pull/92) (#92) — merged 
-
-- [fix: add direct pixel path for pixel_action bypassing element routing](https://github.com/OpenAdaptAI/openadapt-evals/pull/91) (#91) — merged 
-
-- [docs: add EC2 setup guide for WAA deployment](https://github.com/OpenAdaptAI/openadapt-evals/pull/90) (#90) — merged 
 
 
 
