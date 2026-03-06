@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-06 20:37 UTC*
+> *Last updated: 2026-03-06 20:38 UTC*
 
 
 
@@ -33,6 +33,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add done-gate to prevent premature task completion](https://github.com/OpenAdaptAI/openadapt-evals/pull/110) (#110) — merged 
 
 - [feat: add deterministic core4 lane CLI wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/109) (#109) — merged 
 
@@ -71,8 +73,6 @@
 - [fix: add direct pixel path for pixel_action bypassing element routing](https://github.com/OpenAdaptAI/openadapt-evals/pull/91) (#91) — merged 
 
 - [docs: add EC2 setup guide for WAA deployment](https://github.com/OpenAdaptAI/openadapt-evals/pull/90) (#90) — merged 
-
-- [feat: add TaskVerifierRegistry for custom task verification](https://github.com/OpenAdaptAI/openadapt-evals/pull/89) (#89) — merged 
 
 
 
