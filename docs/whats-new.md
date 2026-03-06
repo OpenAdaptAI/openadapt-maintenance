@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-05 20:03 UTC*
+> *Last updated: 2026-03-06 20:37 UTC*
 
 
 
@@ -34,7 +34,11 @@
 ## openadapt-evals
 
 
+- [feat: add deterministic core4 lane CLI wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/109) (#109) — merged 
+
 - [feat: instrument evals usage events via openadapt-telemetry](https://github.com/OpenAdaptAI/openadapt-evals/pull/108) (#108) — merged 
+
+- [fix(waa-live): gate app readiness and classify infra setup failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/107) (#107) — merged 
 
 - [feat: add clean-desktop mode for deterministic WAA parity](https://github.com/OpenAdaptAI/openadapt-evals/pull/106) (#106) — merged 
 
@@ -69,10 +73,6 @@
 - [docs: add EC2 setup guide for WAA deployment](https://github.com/OpenAdaptAI/openadapt-evals/pull/90) (#90) — merged 
 
 - [feat: add TaskVerifierRegistry for custom task verification](https://github.com/OpenAdaptAI/openadapt-evals/pull/89) (#89) — merged 
-
-- [fix: address review findings in verl-agent adapter](https://github.com/OpenAdaptAI/openadapt-evals/pull/88) (#88) — merged 
-
-- [feat: add GPU training automation for verl-agent E2E workflow](https://github.com/OpenAdaptAI/openadapt-evals/pull/87) (#87) — merged 
 
 
 
