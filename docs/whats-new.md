@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-06 21:03 UTC*
+> *Last updated: 2026-03-06 21:09 UTC*
 
 
 
@@ -33,6 +33,8 @@
 
 ## openadapt-evals
 
+
+- [fix: default strict_setup_readiness to False to avoid false infra failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/113) (#113) — merged 
 
 - [fix: search all LibreOffice profile dirs for recovery cleanup](https://github.com/OpenAdaptAI/openadapt-evals/pull/112) (#112) — merged 
 
@@ -71,8 +73,6 @@
 - [docs: add worktree safety rule to CLAUDE.md](https://github.com/OpenAdaptAI/openadapt-evals/pull/94) (#94) — merged 
 
 - [feat: add observe_pil() convenience method for PIL image output](https://github.com/OpenAdaptAI/openadapt-evals/pull/93) (#93) — merged 
-
-- [feat(agent): add closed-loop demo-conditioned controller](https://github.com/OpenAdaptAI/openadapt-evals/pull/92) (#92) — merged 
 
 
 
