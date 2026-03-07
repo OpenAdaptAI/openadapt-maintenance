@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-06 22:01 UTC*
+> *Last updated: 2026-03-07 06:47 UTC*
 
 
 
@@ -33,6 +33,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use WAA server for /evaluate instead of fragile socat proxy](https://github.com/OpenAdaptAI/openadapt-evals/pull/115) (#115) — merged 
 
 - [feat: add Win32 API foreground check as alternative to a11y-based detection](https://github.com/OpenAdaptAI/openadapt-evals/pull/114) (#114) — merged 
 
@@ -71,8 +73,6 @@
 - [fix(controller): prevent plan step drift and reduce VLM false negatives](https://github.com/OpenAdaptAI/openadapt-evals/pull/97) (#97) — merged 
 
 - [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-evals/pull/96) (#96) — merged 
-
-- [docs: add worktree safety rule to CLAUDE.md](https://github.com/OpenAdaptAI/openadapt-evals/pull/94) (#94) — merged 
 
 
 
