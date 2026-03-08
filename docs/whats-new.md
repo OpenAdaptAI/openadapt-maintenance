@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-07 06:48 UTC*
+> *Last updated: 2026-03-08 16:35 UTC*
 
 
 
@@ -33,6 +33,8 @@
 
 ## openadapt-evals
 
+
+- [fix: detect and dismiss Windows lock screen before each task](https://github.com/OpenAdaptAI/openadapt-evals/pull/117) (#117) — merged 
 
 - [fix: use WAA server for /evaluate instead of fragile socat proxy](https://github.com/OpenAdaptAI/openadapt-evals/pull/115) (#115) — merged 
 
@@ -71,8 +73,6 @@
 - [docs: add UNIX socket bridge runbook](https://github.com/OpenAdaptAI/openadapt-evals/pull/98) (#98) — merged 
 
 - [fix(controller): prevent plan step drift and reduce VLM false negatives](https://github.com/OpenAdaptAI/openadapt-evals/pull/97) (#97) — merged 
-
-- [feat: notify docs site on merge to main](https://github.com/OpenAdaptAI/openadapt-evals/pull/96) (#96) — merged 
 
 
 
