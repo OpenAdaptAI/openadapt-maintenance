@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from ._config import ensure_patterns_file_gitignored, load_patterns
+from ._config import Pattern, ensure_patterns_file_gitignored, load_patterns
 from ._github import (
     count_forks,
     disable_force_push_protection,
@@ -112,7 +112,7 @@ def _short_sha(sha: str) -> str:
 
 
 def scan_commit_messages(
-    patterns: List[str],
+    patterns: List[Pattern],
     refs: str = "--all",
     cwd: Optional[str] = None,
 ) -> List[Match]:
@@ -150,13 +150,17 @@ def scan_commit_messages(
 
         for line_number, line in enumerate(message_lines, start=1):
             for pattern in patterns:
-                if pattern.lower() in line.lower():
+                if pattern.case_sensitive:
+                    found = pattern.text in line
+                else:
+                    found = pattern.text.lower() in line.lower()
+                if found:
                     matches.append(
                         Match(
                             sha=sha,
                             subject=subject,
                             line=line,
-                            pattern=pattern,
+                            pattern=pattern.text,
                             line_number=line_number,
                         )
                     )
@@ -165,29 +169,38 @@ def scan_commit_messages(
 
 
 def scan_file_contents(
-    patterns: List[str],
+    patterns: List[Pattern],
     ref: str = "HEAD",
     cwd: Optional[str] = None,
 ) -> List[BlobMatch]:
     """Scan tracked file contents at *ref* for *patterns* using ``git grep``.
+
+    Respects each pattern's ``case_sensitive`` flag.
 
     Returns a list of :class:`BlobMatch` objects.
     """
     blob_matches: List[BlobMatch] = []
 
     for pattern in patterns:
-        result = run_git(
+        grep_args = [
             "grep",
             "-n",
             "--fixed-strings",
-            "-i",
-            pattern,
-            ref,
+        ]
+        # Only add -i for case-insensitive patterns (bug fix: previously
+        # always used -i, causing false positives for patterns like "GoTo"
+        # matching programming "goto" keywords).
+        if not pattern.case_sensitive:
+            grep_args.append("-i")
+        grep_args.extend([pattern.text, ref])
+
+        result = run_git(
+            *grep_args,
             cwd=cwd,
             check=False,  # exit 1 means "no match"
         )
         if result.returncode not in (0, 1):
-            log(f"git grep failed for pattern '{pattern}': {result.stderr}", level="WARN")
+            log(f"git grep failed for pattern '{pattern.text}': {result.stderr}", level="WARN")
             continue
 
         for raw_line in result.stdout.splitlines():
@@ -208,11 +221,68 @@ def scan_file_contents(
                     path=path,
                     line_number=lineno,
                     line=content,
-                    pattern=pattern,
+                    pattern=pattern.text,
                 )
             )
 
     return blob_matches
+
+
+def scan_file_history(
+    patterns: List[Pattern],
+    cwd: Optional[str] = None,
+) -> List[Match]:
+    """Scan file *history* for patterns using ``git log -S``.
+
+    Unlike :func:`scan_file_contents` (which only checks HEAD),
+    this finds commits where a pattern was introduced or removed in any
+    file across the entire history.  Returns :class:`Match` objects
+    (one per pattern/commit pair) so the caller can identify affected repos.
+
+    This is critical for the org-wide scan — a repo may have removed a
+    sensitive string from HEAD but still have it in historical blobs.
+    ``git filter-repo`` will rewrite those blobs, but the scan must
+    detect them first so the repo is flagged for cleaning.
+    """
+    history_matches: List[Match] = []
+
+    for pattern in patterns:
+        git_args = ["log", "--all", "--oneline"]
+        if pattern.case_sensitive:
+            git_args.append("-S")
+            git_args.append(pattern.text)
+        else:
+            git_args.append("-S")
+            git_args.append(pattern.text)
+            git_args.append("--regexp-ignore-case")
+
+        # Limit to text/config files to avoid massive binary diffs
+        git_args.append("--")
+        git_args.extend(["*.md", "*.txt", "*.yml", "*.yaml", "*.json",
+                         "*.toml", "*.py", "*.rst", "*.cfg", "*.ini",
+                         "*.html"])
+
+        result = run_git(*git_args, cwd=cwd, check=False)
+        if result.returncode != 0:
+            continue
+
+        for line in result.stdout.strip().splitlines():
+            if not line.strip():
+                continue
+            parts = line.split(None, 1)
+            sha = parts[0]
+            subject = parts[1] if len(parts) > 1 else ""
+            history_matches.append(
+                Match(
+                    sha=sha,
+                    subject=subject,
+                    line=f"[file history] {subject}",
+                    pattern=pattern.text,
+                    line_number=0,
+                )
+            )
+
+    return history_matches
 
 
 # ===================================================================
@@ -298,12 +368,21 @@ def build_plan(
 # ===================================================================
 
 
-def _build_message_callback(patterns: List[str], replacement: str) -> str:
+def _re_flags_for_pattern(pattern: Pattern) -> str:
+    """Return the ``re`` flags expression for *pattern*."""
+    if pattern.case_sensitive:
+        return "0"
+    return "re.IGNORECASE"
+
+
+def _build_message_callback(patterns: List[Pattern], replacement: str) -> str:
     """Generate Python code for ``git filter-repo --message-callback``.
 
     For multi-word patterns, generates cross-line variants (the pattern
     split at word boundaries with ``\\n``) to handle cases where the pattern
     spans two lines in commit messages.
+
+    Respects each pattern's ``case_sensitive`` flag.
     """
     # Build all search/replace pairs including cross-line variants
     lines: List[str] = []
@@ -312,15 +391,16 @@ def _build_message_callback(patterns: List[str], replacement: str) -> str:
     lines.append("msg = message")
 
     for pattern in patterns:
-        # Direct replacement (case-insensitive)
+        flags = _re_flags_for_pattern(pattern)
+        # Direct replacement
         lines.append(
-            f"msg = re.sub({pattern!r}.encode('utf-8'), replacement, msg, flags=re.IGNORECASE)"
+            f"msg = re.sub({pattern.text!r}.encode('utf-8'), replacement, msg, flags={flags})"
         )
 
         # Cross-line variants: for multi-word patterns, the pattern may be
         # split across two lines.  Generate variants where each inter-word
         # boundary is replaced with \\n (plus optional surrounding whitespace).
-        words = pattern.split()
+        words = pattern.text.split()
         if len(words) > 1:
             for i in range(1, len(words)):
                 left = " ".join(words[:i])
@@ -328,23 +408,27 @@ def _build_message_callback(patterns: List[str], replacement: str) -> str:
                 # Pattern: left + whitespace + newline + optional whitespace + right
                 cross_pat = re.escape(left) + r"\s*\n\s*" + re.escape(right)
                 lines.append(
-                    f"msg = re.sub({cross_pat!r}.encode('utf-8'), replacement, msg, flags=re.IGNORECASE)"
+                    f"msg = re.sub({cross_pat!r}.encode('utf-8'), replacement, msg, flags={flags})"
                 )
 
     lines.append("return msg")
     return "\n".join(lines)
 
 
-def _build_blob_callback(patterns: List[str], replacement: str) -> str:
+def _build_blob_callback(patterns: List[Pattern], replacement: str) -> str:
     """Generate Python code for ``git filter-repo --blob-callback`` to
-    replace patterns in file contents."""
+    replace patterns in file contents.
+
+    Respects each pattern's ``case_sensitive`` flag.
+    """
     lines: List[str] = []
     lines.append("import re")
     lines.append(f"replacement = {replacement!r}.encode('utf-8')")
 
     for pattern in patterns:
+        flags = _re_flags_for_pattern(pattern)
         lines.append(
-            f"blob.data = re.sub({pattern!r}.encode('utf-8'), replacement, blob.data, flags=re.IGNORECASE)"
+            f"blob.data = re.sub({pattern.text!r}.encode('utf-8'), replacement, blob.data, flags={flags})"
         )
 
     return "\n".join(lines)
@@ -360,7 +444,8 @@ def cmd_scan(args) -> None:
     print results."""
     patterns_path = args.patterns
     ensure_patterns_file_gitignored(patterns_path)
-    patterns = load_patterns(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
 
     if not patterns:
         log("No patterns found in the patterns file", level="WARN")
@@ -445,7 +530,8 @@ def cmd_plan(args) -> None:
     before/after preview."""
     patterns_path = args.patterns
     ensure_patterns_file_gitignored(patterns_path)
-    patterns = load_patterns(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
 
     if not patterns:
         log("No patterns found in the patterns file", level="WARN")
@@ -496,8 +582,8 @@ def cmd_plan(args) -> None:
             before = m.line.strip()
             after = before
             for pat in patterns:
-                # Case-insensitive replacement for preview
-                compiled = re.compile(re.escape(pat), re.IGNORECASE)
+                flags = 0 if pat.case_sensitive else re.IGNORECASE
+                compiled = re.compile(re.escape(pat.text), flags)
                 after = compiled.sub(replacement, after)
             print(f"\n  {_short_sha(m.sha)}")
             print(f"    BEFORE: {before}")
@@ -518,7 +604,8 @@ def cmd_plan(args) -> None:
             before = b.line.strip()
             after = before
             for pat in patterns:
-                compiled = re.compile(re.escape(pat), re.IGNORECASE)
+                flags = 0 if pat.case_sensitive else re.IGNORECASE
+                compiled = re.compile(re.escape(pat.text), flags)
                 after = compiled.sub(replacement, after)
             print(f"\n  {b.path}:{b.line_number}")
             print(f"    BEFORE: {before}")
@@ -545,7 +632,8 @@ def cmd_clean(args) -> None:
     """
     patterns_path = args.patterns
     ensure_patterns_file_gitignored(patterns_path)
-    patterns = load_patterns(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
 
     if not patterns:
         log("No patterns found in the patterns file", level="WARN")
@@ -563,13 +651,15 @@ def cmd_clean(args) -> None:
     log("Step 0/7: Quick scan ...")
     commit_matches = scan_commit_messages(patterns, cwd=cwd)
     blob_matches = scan_file_contents(patterns, cwd=cwd)
+    history_matches = scan_file_history(patterns, cwd=cwd)
 
-    if not commit_matches and not blob_matches:
+    if not commit_matches and not blob_matches and not history_matches:
         log("No matches found — nothing to clean", level="OK")
         return
 
-    log(f"Found {len(commit_matches)} commit-message hit(s) and "
-        f"{len(blob_matches)} file-content hit(s)")
+    log(f"Found {len(commit_matches)} commit-message hit(s), "
+        f"{len(blob_matches)} file-content hit(s), and "
+        f"{len(history_matches)} file-history hit(s)")
 
     plan = build_plan(commit_matches, replacement, blob_matches=blob_matches, cwd=cwd)
 
@@ -742,7 +832,8 @@ def cmd_verify(args) -> None:
     the GitHub API."""
     patterns_path = args.patterns
     ensure_patterns_file_gitignored(patterns_path)
-    patterns = load_patterns(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
 
     if not patterns:
         log("No patterns found in the patterns file", level="WARN")
@@ -805,9 +896,11 @@ def cmd_verify(args) -> None:
 
         total_checked = 0
         total_failures = 0
+        # Convert Pattern objects to strings for GitHub API verification
+        pattern_strings = [p.text for p in patterns]
         for branch in branches:
             checked, failures = verify_all_commits_scrubbed(
-                repo, branch, patterns, limit=getattr(args, "limit", 100)
+                repo, branch, pattern_strings, limit=getattr(args, "limit", 100)
             )
             total_checked += checked
             total_failures += failures
@@ -887,3 +980,338 @@ def cmd_ticket(args) -> None:
         log(f"Ticket text written to {output}", level="OK")
     else:
         print(ticket)
+
+
+# ===================================================================
+# Multi-repo (org-wide) commands
+# ===================================================================
+
+
+def _list_org_repos(
+    org: str,
+    *,
+    include_private: bool = False,
+    skip_forks: bool = True,
+) -> List[Tuple[str, str]]:
+    """List repos in a GitHub org.  Returns ``[(name, clone_url), ...]``."""
+    visibility = "" if include_private else " --visibility public"
+    cmd = f"gh repo list {org} --limit 200 --json name,sshUrl,isPrivate,isFork --jq '.[]"
+    if skip_forks:
+        cmd += " | select(.isFork == false)"
+    if not include_private:
+        cmd += " | select(.isPrivate == false)"
+    cmd += ' | "\\(.name)\\t\\(.sshUrl)"' + "'"
+    result = run_cmd(["bash", "-c", cmd], check=False)
+    if result.returncode != 0:
+        log(f"Failed to list repos for {org}: {result.stderr}", level="ERROR")
+        return []
+    repos = []
+    for line in result.stdout.strip().splitlines():
+        parts = line.split("\t", 1)
+        if len(parts) == 2:
+            repos.append((parts[0], parts[1]))
+    return repos
+
+
+def _ensure_repo_cloned(
+    name: str,
+    clone_url: str,
+    base_dir: str,
+) -> Optional[str]:
+    """Ensure *name* is cloned under *base_dir*.  Returns the repo path."""
+    repo_path = os.path.join(base_dir, name)
+    if os.path.isdir(os.path.join(repo_path, ".git")):
+        # Already cloned — fetch latest
+        run_git("fetch", "--all", "--prune", cwd=repo_path, check=False)
+        return repo_path
+    # Clone
+    log(f"Cloning {name} ...")
+    result = run_git("clone", clone_url, repo_path, check=False)
+    if result.returncode != 0:
+        log(f"Failed to clone {name}: {result.stderr}", level="ERROR")
+        return None
+    return repo_path
+
+
+def cmd_scan_org(args) -> None:
+    """``scan-org`` subcommand — scan all (public) repos in a GitHub org."""
+    org = args.org
+    patterns_path = args.patterns
+    ensure_patterns_file_gitignored(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
+
+    if not patterns:
+        log("No patterns found in the patterns file", level="WARN")
+        return
+
+    base_dir = getattr(args, "clone_dir", None)
+    if not base_dir:
+        base_dir = tempfile.mkdtemp(prefix="tidy-org-")
+    base_dir = os.path.abspath(base_dir)
+
+    include_private = getattr(args, "include_private", False)
+
+    log(f"Listing {'all' if include_private else 'public'} repos for {org} ...")
+    repos = _list_org_repos(org, include_private=include_private)
+
+    if not repos:
+        log("No repos found", level="WARN")
+        return
+
+    log(f"Found {len(repos)} repo(s) to scan")
+
+    output_json = getattr(args, "json", False)
+    all_results: Dict[str, Dict] = {}
+    total_commit_hits = 0
+    total_blob_hits = 0
+    total_history_hits = 0
+    affected_repos: List[str] = []
+
+    for name, clone_url in repos:
+        repo_path = _ensure_repo_cloned(name, clone_url, base_dir)
+        if repo_path is None:
+            continue
+
+        commit_matches = scan_commit_messages(patterns, cwd=repo_path)
+        blob_matches = scan_file_contents(patterns, cwd=repo_path)
+        history_matches = scan_file_history(patterns, cwd=repo_path)
+
+        if commit_matches or blob_matches or history_matches:
+            affected_repos.append(name)
+            total_commit_hits += len(commit_matches)
+            total_blob_hits += len(blob_matches)
+            total_history_hits += len(history_matches)
+
+            if output_json:
+                all_results[name] = {
+                    "commit_matches": [
+                        {"sha": m.sha, "subject": m.subject, "line": m.line,
+                         "pattern": m.pattern, "line_number": m.line_number}
+                        for m in commit_matches
+                    ],
+                    "blob_matches": [
+                        {"path": b.path, "line_number": b.line_number,
+                         "line": b.line, "pattern": b.pattern}
+                        for b in blob_matches
+                    ],
+                    "history_matches": [
+                        {"sha": m.sha, "subject": m.subject,
+                         "pattern": m.pattern}
+                        for m in history_matches
+                    ],
+                }
+            else:
+                print(f"\n{'='*60}")
+                print(f"  {name}")
+                print(f"{'='*60}")
+
+                if commit_matches:
+                    seen_shas: set[str] = set()
+                    for m in commit_matches:
+                        if m.sha not in seen_shas:
+                            seen_shas.add(m.sha)
+                            print(f"  COMMIT {_short_sha(m.sha)}  {m.subject}")
+                        print(f"    L{m.line_number}: [{m.pattern}] {m.line.strip()}")
+
+                if blob_matches:
+                    for b in blob_matches:
+                        print(f"  FILE {b.path}:{b.line_number}: [{b.pattern}] {b.line.strip()}")
+
+                if history_matches:
+                    seen_shas_h: set[str] = set()
+                    for m in history_matches:
+                        if m.sha not in seen_shas_h:
+                            seen_shas_h.add(m.sha)
+                            print(f"  HISTORY {_short_sha(m.sha)}  {m.subject}")
+
+    if output_json:
+        print(json.dumps(all_results, indent=2))
+    else:
+        print(f"\n{'='*60}")
+        print(f"ORG SUMMARY: {len(repos)} repo(s) scanned, "
+              f"{len(affected_repos)} affected")
+        if affected_repos:
+            print(f"  Affected repos: {', '.join(affected_repos)}")
+        print(f"  Total commit-message hits : {total_commit_hits}")
+        print(f"  Total file-content hits   : {total_blob_hits}")
+        print(f"  Total file-history hits   : {total_history_hits}")
+        print(f"{'='*60}\n")
+
+
+def cmd_clean_org(args) -> None:
+    """``clean-org`` subcommand — scan + clean all affected repos in a
+    GitHub org.
+
+    Iterates over all public repos, scans each, and runs the clean
+    pipeline on repos with matches.
+    """
+    org = args.org
+    patterns_path = args.patterns
+    ensure_patterns_file_gitignored(patterns_path)
+    case_sensitive = getattr(args, "case_sensitive", False)
+    patterns = load_patterns(patterns_path, case_sensitive=case_sensitive)
+
+    if not patterns:
+        log("No patterns found in the patterns file", level="WARN")
+        return
+
+    replacement = args.replacement
+
+    base_dir = getattr(args, "clone_dir", None)
+    if not base_dir:
+        base_dir = tempfile.mkdtemp(prefix="tidy-org-")
+    base_dir = os.path.abspath(base_dir)
+
+    include_private = getattr(args, "include_private", False)
+    auto_yes = getattr(args, "yes", False)
+
+    log(f"Listing {'all' if include_private else 'public'} repos for {org} ...")
+    repos = _list_org_repos(org, include_private=include_private)
+
+    if not repos:
+        log("No repos found", level="WARN")
+        return
+
+    log(f"Found {len(repos)} repo(s) — scanning for matches ...")
+
+    affected: List[Tuple[str, str, List[Match], List[BlobMatch]]] = []
+
+    for name, clone_url in repos:
+        repo_path = _ensure_repo_cloned(name, clone_url, base_dir)
+        if repo_path is None:
+            continue
+
+        commit_matches = scan_commit_messages(patterns, cwd=repo_path)
+        blob_matches = scan_file_contents(patterns, cwd=repo_path)
+        history_matches = scan_file_history(patterns, cwd=repo_path)
+
+        if commit_matches or blob_matches or history_matches:
+            affected.append((name, repo_path, commit_matches, blob_matches))
+            log(f"{name}: {len(commit_matches)} commit + {len(blob_matches)} file + "
+                f"{len(history_matches)} history hit(s)")
+        else:
+            log(f"{name}: clean", level="OK")
+
+    if not affected:
+        log("All repos clean — nothing to do", level="OK")
+        return
+
+    # Summary before proceeding
+    print(f"\n{'='*60}")
+    print(f"REPOS TO CLEAN ({len(affected)}):")
+    for name, _, cm, bm in affected:
+        print(f"  {name}: {len(cm)} commit-message + {len(bm)} file-content hit(s)")
+    print(f"{'='*60}\n")
+
+    if not auto_yes:
+        if not confirm(f"Proceed to clean {len(affected)} repo(s)?"):
+            log("Aborted by user", level="WARN")
+            return
+
+    # Clean each affected repo
+    cleaned = 0
+    failed = 0
+    for name, repo_path, _, _ in affected:
+        log(f"\n--- Cleaning {name} ---")
+
+        try:
+            remote_url = _get_remote_url(cwd=repo_path)
+            repo_slug = _extract_repo_from_url(remote_url)
+        except Exception as e:
+            log(f"Could not determine remote for {name}: {e}", level="ERROR")
+            failed += 1
+            continue
+
+        # Re-scan (in case state changed)
+        cm = scan_commit_messages(patterns, cwd=repo_path)
+        bm = scan_file_contents(patterns, cwd=repo_path)
+
+        if not cm and not bm:
+            log(f"{name}: no matches on re-scan — skipping", level="OK")
+            continue
+
+        plan = build_plan(cm, replacement, blob_matches=bm, cwd=repo_path)
+
+        # Backup
+        backup_path = os.path.join(repo_path, f".git-backup-{os.getpid()}.bundle")
+        run_git("bundle", "create", backup_path, "--all", cwd=repo_path)
+        log(f"Backup: {backup_path}", level="OK")
+
+        # Mirror clone
+        work_dir = tempfile.mkdtemp(prefix=f"tidy-{name}-")
+        work_clone = os.path.join(work_dir, "repo.git")
+        run_git("clone", "--mirror", repo_path, work_clone)
+
+        # Run git filter-repo
+        fr_check = run_cmd(["git", "filter-repo", "--version"], check=False)
+        if fr_check.returncode != 0:
+            log("git-filter-repo not installed", level="ERROR")
+            shutil.rmtree(work_dir, ignore_errors=True)
+            failed += 1
+            continue
+
+        msg_cb = _build_message_callback(patterns, replacement)
+        blob_cb = _build_blob_callback(patterns, replacement)
+
+        filter_cmd = [
+            "git", "filter-repo",
+            "--message-callback", msg_cb,
+            "--blob-callback", blob_cb,
+            "--force",
+        ]
+        result = run_cmd(filter_cmd, cwd=work_clone, check=False)
+        if result.returncode != 0:
+            log(f"filter-repo failed for {name}: {result.stderr}", level="ERROR")
+            shutil.rmtree(work_dir, ignore_errors=True)
+            failed += 1
+            continue
+
+        # Re-add remote and force push
+        run_git("remote", "add", "origin", remote_url, cwd=work_clone, check=False)
+
+        # Toggle branch protection
+        saved_protections = []
+        for branch in plan.affected_branches:
+            try:
+                original = disable_force_push_protection(repo_slug, branch)
+                if original is not None:
+                    saved_protections.append(original)
+            except Exception as e:
+                log(f"Could not disable protection on '{branch}': {e}", level="WARN")
+
+        try:
+            push_result = run_git(
+                "push", "--force", "--all", "origin",
+                cwd=work_clone, check=False,
+            )
+            if push_result.returncode != 0:
+                log(f"Force push (branches) failed for {name}: {push_result.stderr}", level="ERROR")
+                failed += 1
+            else:
+                tag_result = run_git(
+                    "push", "--force", "--tags", "origin",
+                    cwd=work_clone, check=False,
+                )
+                if tag_result.returncode != 0:
+                    log(f"Force push (tags) failed for {name}: {tag_result.stderr}", level="WARN")
+                log(f"{name}: cleaned successfully", level="OK")
+                cleaned += 1
+        finally:
+            for prot in saved_protections:
+                try:
+                    restore_branch_protection(repo_slug, prot)
+                except Exception as e:
+                    log(f"Could not restore protection: {e}", level="ERROR")
+
+        # Clean up
+        shutil.rmtree(work_dir, ignore_errors=True)
+
+        # Fetch rewritten history into local repo
+        run_git("fetch", "origin", cwd=repo_path, check=False)
+
+    # Final summary
+    print(f"\n{'='*60}")
+    print(f"ORG CLEAN SUMMARY: {cleaned} cleaned, {failed} failed, "
+          f"{len(affected) - cleaned - failed} skipped")
+    print(f"{'='*60}\n")
