@@ -4,22 +4,51 @@ from __future__ import annotations
 
 import os
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 from typing import List
 
 from ._utils import log
 
 
-def load_patterns(path: str) -> List[str]:
+@dataclass
+class Pattern:
+    """A search pattern with case-sensitivity metadata."""
+
+    text: str
+    case_sensitive: bool = False
+
+    def __str__(self) -> str:
+        return self.text
+
+
+def load_patterns(path: str, *, case_sensitive: bool = False) -> List[Pattern]:
     """Read *path*, strip comments (``#``) and blank lines, return a list of
-    non-empty pattern strings."""
-    patterns: List[str] = []
+    :class:`Pattern` objects.
+
+    Supports per-pattern case-sensitivity flags via prefix syntax:
+
+    - ``cs:Acme Corp``  — force case-sensitive for this pattern
+    - ``ci:acme``       — force case-insensitive for this pattern
+    - ``Acme Corp``     — uses the *case_sensitive* default
+
+    The *case_sensitive* parameter controls the default for patterns without
+    a prefix.
+    """
+    patterns: List[Pattern] = []
     with open(path, "r", encoding="utf-8") as fh:
         for raw_line in fh:
             line = raw_line.strip()
             if not line or line.startswith("#"):
                 continue
-            patterns.append(line)
+
+            # Per-pattern overrides
+            if line.startswith("cs:"):
+                patterns.append(Pattern(text=line[3:], case_sensitive=True))
+            elif line.startswith("ci:"):
+                patterns.append(Pattern(text=line[3:], case_sensitive=False))
+            else:
+                patterns.append(Pattern(text=line, case_sensitive=case_sensitive))
     return patterns
 
 
