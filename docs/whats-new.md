@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-17 02:13 UTC*
+> *Last updated: 2026-03-17 16:11 UTC*
 
 
 
@@ -27,6 +27,8 @@
 
 ## openadapt-capture
 
+
+- [fix: add oa-atomacos dependency for macOS window capture](https://github.com/OpenAdaptAI/openadapt-capture/pull/16) (#16) — merged 
 
 - [fix: browser capture end-to-end pipeline](https://github.com/OpenAdaptAI/openadapt-capture/pull/15) (#15) — merged 
 
