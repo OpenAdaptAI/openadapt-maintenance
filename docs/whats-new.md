@@ -1,7 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-17 01:32 UTC*
+> *Last updated: 2026-03-17 01:45 UTC*
+
+
+
+## openadapt-ml
+
+
+- [docs: add LoRA-per-task design document](https://github.com/OpenAdaptAI/openadapt-ml/pull/54) (#54) — merged 
 
 
 
