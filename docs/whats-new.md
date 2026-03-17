@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-17 01:45 UTC*
+> *Last updated: 2026-03-17 02:12 UTC*
 
 
 
@@ -22,6 +22,13 @@
 - [feat: register HttpAgent in CLI with --agent http](https://github.com/OpenAdaptAI/openadapt-evals/pull/119) (#119) — merged 
 
 - [feat: add HttpAgent, per-step evaluation, and lightweight trace export](https://github.com/OpenAdaptAI/openadapt-evals/pull/118) (#118) — merged 
+
+
+
+## openadapt-capture
+
+
+- [fix: browser capture end-to-end pipeline](https://github.com/OpenAdaptAI/openadapt-capture/pull/15) (#15) — merged 
 
 
 
