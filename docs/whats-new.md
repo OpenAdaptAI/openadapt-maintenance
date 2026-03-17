@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-17 17:13 UTC*
+> *Last updated: 2026-03-17 17:15 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [feat: add GRPO validation infrastructure and LoRA checkpoint support](https://github.com/OpenAdaptAI/openadapt-ml/pull/55) (#55) — merged 
 
 - [docs: add LoRA-per-task design document](https://github.com/OpenAdaptAI/openadapt-ml/pull/54) (#54) — merged 
 
