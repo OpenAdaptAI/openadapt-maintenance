@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-17 17:22 UTC*
+> *Last updated: 2026-03-18 06:36 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [fix: use ResetConfig for RLEnvironment.reset() in validation script](https://github.com/OpenAdaptAI/openadapt-ml/pull/56) (#56) — merged 
 
 - [feat: add GRPO validation infrastructure and LoRA checkpoint support](https://github.com/OpenAdaptAI/openadapt-ml/pull/55) (#55) — merged 
 
@@ -16,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use C8i/M8i instances for AWS nested virt (10x cheaper than metal)](https://github.com/OpenAdaptAI/openadapt-evals/pull/124) (#124) — merged 
 
 - [chore: require openadapt-telemetry >=0.2.0](https://github.com/OpenAdaptAI/openadapt-evals/pull/123) (#123) — merged 
 
