@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 23:17 UTC*
+> *Last updated: 2026-03-18 23:21 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add PlannerCache for caching planner API responses during training](https://github.com/OpenAdaptAI/openadapt-evals/pull/136) (#136) — merged 
 
 - [feat: add PlannerTrajectoryLogger for SFT training data collection](https://github.com/OpenAdaptAI/openadapt-evals/pull/135) (#135) — merged 
 
