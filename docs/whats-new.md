@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 17:51 UTC*
+> *Last updated: 2026-03-18 17:54 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 
 - [feat: add OpenEnv-compatible WAA desktop environment](https://github.com/OpenAdaptAI/openadapt-evals/pull/128) (#128) — merged 
+
+- [feat: add TRL GRPOTrainer rollout_func for WAA environments](https://github.com/OpenAdaptAI/openadapt-evals/pull/127) (#127) — merged 
 
 - [fix: remove python -c wrapping from VM command execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/126) (#126) — merged 
 
