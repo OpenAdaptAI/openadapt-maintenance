@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 22:25 UTC*
+> *Last updated: 2026-03-18 22:26 UTC*
 
 
 
@@ -19,7 +19,11 @@
 ## openadapt-evals
 
 
+- [feat: add PlannerGrounderAgent for dual-model GUI automation](https://github.com/OpenAdaptAI/openadapt-evals/pull/134) (#134) — merged 
+
 - [fix: remove --entrypoint override so evaluate_server.py starts automatically](https://github.com/OpenAdaptAI/openadapt-evals/pull/133) (#133) — merged 
+
+- [feat: add WAA native JSON import to TaskConfig](https://github.com/OpenAdaptAI/openadapt-evals/pull/132) (#132) — merged 
 
 - [fix: wrap shell commands for /execute_windows and fix file_exists metric](https://github.com/OpenAdaptAI/openadapt-evals/pull/131) (#131) — merged 
 
