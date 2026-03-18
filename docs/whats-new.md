@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 06:36 UTC*
+> *Last updated: 2026-03-18 06:37 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add YAML-based custom task evaluation without forking WAA](https://github.com/OpenAdaptAI/openadapt-evals/pull/125) (#125) — merged 
 
 - [fix: use C8i/M8i instances for AWS nested virt (10x cheaper than metal)](https://github.com/OpenAdaptAI/openadapt-evals/pull/124) (#124) — merged 
 
