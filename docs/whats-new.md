@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 22:58 UTC*
+> *Last updated: 2026-03-18 23:16 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add PlannerTrajectoryLogger for SFT training data collection](https://github.com/OpenAdaptAI/openadapt-evals/pull/135) (#135) — merged 
 
 - [feat: add PlannerGrounderAgent for dual-model GUI automation](https://github.com/OpenAdaptAI/openadapt-evals/pull/134) (#134) — merged 
 
