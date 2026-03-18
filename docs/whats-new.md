@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 17:56 UTC*
+> *Last updated: 2026-03-18 22:25 UTC*
 
 
 
@@ -18,6 +18,14 @@
 
 ## openadapt-evals
 
+
+- [fix: remove --entrypoint override so evaluate_server.py starts automatically](https://github.com/OpenAdaptAI/openadapt-evals/pull/133) (#133) — merged 
+
+- [fix: wrap shell commands for /execute_windows and fix file_exists metric](https://github.com/OpenAdaptAI/openadapt-evals/pull/131) (#131) — merged 
+
+- [feat: add --correction-library and --enable-correction-capture CLI flags](https://github.com/OpenAdaptAI/openadapt-evals/pull/130) (#130) — merged 
+
+- [feat: add end-to-end GRPO training script with TRL + Unsloth](https://github.com/OpenAdaptAI/openadapt-evals/pull/129) (#129) — merged 
 
 - [feat: add OpenEnv-compatible WAA desktop environment](https://github.com/OpenAdaptAI/openadapt-evals/pull/128) (#128) — merged 
 
