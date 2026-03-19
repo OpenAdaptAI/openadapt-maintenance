@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 00:40 UTC*
+> *Last updated: 2026-03-19 00:45 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: align trace report test assertions with reset-step behavior](https://github.com/OpenAdaptAI/openadapt-evals/pull/141) (#141) — merged 
 
 - [feat: add AReaL AgentWorkflow wrapping WAADesktopEnv for RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/140) (#140) — merged 
 
@@ -56,8 +58,6 @@
 - [chore: require openadapt-telemetry >=0.2.0](https://github.com/OpenAdaptAI/openadapt-evals/pull/123) (#123) — merged 
 
 - [feat: add GiGPO anchor state computation to WAADesktopEnv](https://github.com/OpenAdaptAI/openadapt-evals/pull/122) (#122) — merged 
-
-- [docs: add experiment framework design document](https://github.com/OpenAdaptAI/openadapt-evals/pull/121) (#121) — merged 
 
 
 
