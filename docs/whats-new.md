@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 17:54 UTC*
+> *Last updated: 2026-03-19 18:00 UTC*
 
 
 
@@ -72,6 +72,8 @@
 
 ## openadapt-wright
 
+
+- [feat: add heartbeat + bot-side reaper for worker reliability](https://github.com/OpenAdaptAI/openadapt-wright/pull/26) (#26) — merged 
 
 - [fix: strip heavy ML/CUDA deps for lightweight worker installs](https://github.com/OpenAdaptAI/openadapt-wright/pull/25) (#25) — merged 
 
