@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 01:56 UTC*
+> *Last updated: 2026-03-19 14:34 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add workflow transcript generation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/143) (#143) — merged 
 
 - [feat: add workflow extraction Pydantic models, WAA adapter, and matching pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/142) (#142) — merged 
 
@@ -56,8 +58,6 @@
 - [feat: add YAML-based custom task evaluation without forking WAA](https://github.com/OpenAdaptAI/openadapt-evals/pull/125) (#125) — merged 
 
 - [fix: use C8i/M8i instances for AWS nested virt (10x cheaper than metal)](https://github.com/OpenAdaptAI/openadapt-evals/pull/124) (#124) — merged 
-
-- [chore: require openadapt-telemetry >=0.2.0](https://github.com/OpenAdaptAI/openadapt-evals/pull/123) (#123) — merged 
 
 
 
