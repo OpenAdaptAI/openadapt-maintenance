@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 14:34 UTC*
+> *Last updated: 2026-03-19 14:44 UTC*
 
 
 
@@ -72,6 +72,8 @@
 
 ## openadapt-wright
 
+
+- [fix: strip local uv path sources before installing dependencies](https://github.com/OpenAdaptAI/openadapt-wright/pull/24) (#24) — merged 
 
 - [feat: add productization plan and web UI scaffold](https://github.com/OpenAdaptAI/openadapt-wright/pull/23) (#23) — merged 
 
