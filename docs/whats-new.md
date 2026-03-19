@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 18:24 UTC*
+> *Last updated: 2026-03-19 18:55 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix(agent): add double_click support and anti-loop recovery](https://github.com/OpenAdaptAI/openadapt-evals/pull/148) (#148) — merged 
 
 - [fix: replace Python patch script with shell script in Dockerfile](https://github.com/OpenAdaptAI/openadapt-evals/pull/147) (#147) — merged 
 
@@ -56,8 +58,6 @@
 - [feat: add --correction-library and --enable-correction-capture CLI flags](https://github.com/OpenAdaptAI/openadapt-evals/pull/130) (#130) — merged 
 
 - [feat: add end-to-end GRPO training script with TRL + Unsloth](https://github.com/OpenAdaptAI/openadapt-evals/pull/129) (#129) — merged 
-
-- [feat: add OpenEnv-compatible WAA desktop environment](https://github.com/OpenAdaptAI/openadapt-evals/pull/128) (#128) — merged 
 
 
 
