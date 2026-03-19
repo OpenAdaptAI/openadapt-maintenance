@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 01:25 UTC*
+> *Last updated: 2026-03-19 01:56 UTC*
 
 
 
@@ -72,6 +72,8 @@
 
 ## openadapt-wright
 
+
+- [feat: add productization plan and web UI scaffold](https://github.com/OpenAdaptAI/openadapt-wright/pull/23) (#23) — merged 
 
 - [fix: bot wakes worker after job insert](https://github.com/OpenAdaptAI/openadapt-wright/pull/22) (#22) — merged 
 
