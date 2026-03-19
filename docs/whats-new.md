@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 00:45 UTC*
+> *Last updated: 2026-03-19 01:02 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add workflow extraction Pydantic models, WAA adapter, and matching pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/142) (#142) — merged 
 
 - [fix: align trace report test assertions with reset-step behavior](https://github.com/OpenAdaptAI/openadapt-evals/pull/141) (#141) — merged 
 
@@ -56,8 +58,6 @@
 - [fix: use C8i/M8i instances for AWS nested virt (10x cheaper than metal)](https://github.com/OpenAdaptAI/openadapt-evals/pull/124) (#124) — merged 
 
 - [chore: require openadapt-telemetry >=0.2.0](https://github.com/OpenAdaptAI/openadapt-evals/pull/123) (#123) — merged 
-
-- [feat: add GiGPO anchor state computation to WAADesktopEnv](https://github.com/OpenAdaptAI/openadapt-evals/pull/122) (#122) — merged 
 
 
 
