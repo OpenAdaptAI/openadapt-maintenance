@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 16:15 UTC*
+> *Last updated: 2026-03-19 16:16 UTC*
 
 
 
@@ -72,6 +72,8 @@
 
 ## openadapt-wright
 
+
+- [fix: strip heavy ML/CUDA deps for lightweight worker installs](https://github.com/OpenAdaptAI/openadapt-wright/pull/25) (#25) — merged 
 
 - [fix: strip local uv path sources before installing dependencies](https://github.com/OpenAdaptAI/openadapt-wright/pull/24) (#24) — merged 
 
