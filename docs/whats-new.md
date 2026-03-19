@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 14:57 UTC*
+> *Last updated: 2026-03-19 16:15 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use structured planner output to prevent compound instruction drops](https://github.com/OpenAdaptAI/openadapt-evals/pull/146) (#146) — merged 
 
 - [fix: improve WAA VM infrastructure reliability](https://github.com/OpenAdaptAI/openadapt-evals/pull/145) (#145) — merged 
 
@@ -56,8 +58,6 @@
 - [feat: add OpenEnv-compatible WAA desktop environment](https://github.com/OpenAdaptAI/openadapt-evals/pull/128) (#128) — merged 
 
 - [feat: add TRL GRPOTrainer rollout_func for WAA environments](https://github.com/OpenAdaptAI/openadapt-evals/pull/127) (#127) — merged 
-
-- [fix: remove python -c wrapping from VM command execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/126) (#126) — merged 
 
 
 
