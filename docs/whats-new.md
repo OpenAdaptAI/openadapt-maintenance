@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 22:26 UTC*
+> *Last updated: 2026-03-19 22:47 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: auto-detect evaluate_url, waa_examples_path, and screen resolution](https://github.com/OpenAdaptAI/openadapt-evals/pull/149) (#149) — merged 
 
 - [fix(agent): add double_click support and anti-loop recovery](https://github.com/OpenAdaptAI/openadapt-evals/pull/148) (#148) — merged 
 
@@ -56,8 +58,6 @@
 - [fix: wrap shell commands for /execute_windows and fix file_exists metric](https://github.com/OpenAdaptAI/openadapt-evals/pull/131) (#131) — merged 
 
 - [feat: add --correction-library and --enable-correction-capture CLI flags](https://github.com/OpenAdaptAI/openadapt-evals/pull/130) (#130) — merged 
-
-- [feat: add end-to-end GRPO training script with TRL + Unsloth](https://github.com/OpenAdaptAI/openadapt-evals/pull/129) (#129) — merged 
 
 
 
