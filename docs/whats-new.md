@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 14:45 UTC*
+> *Last updated: 2026-03-19 14:57 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: improve WAA VM infrastructure reliability](https://github.com/OpenAdaptAI/openadapt-evals/pull/145) (#145) — merged 
 
 - [fix: use persistent storage for WAA data instead of ephemeral /mnt](https://github.com/OpenAdaptAI/openadapt-evals/pull/144) (#144) — merged 
 
@@ -56,8 +58,6 @@
 - [feat: add TRL GRPOTrainer rollout_func for WAA environments](https://github.com/OpenAdaptAI/openadapt-evals/pull/127) (#127) — merged 
 
 - [fix: remove python -c wrapping from VM command execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/126) (#126) — merged 
-
-- [feat: add YAML-based custom task evaluation without forking WAA](https://github.com/OpenAdaptAI/openadapt-evals/pull/125) (#125) — merged 
 
 
 
