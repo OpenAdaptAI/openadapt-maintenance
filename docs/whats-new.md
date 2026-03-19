@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 01:02 UTC*
+> *Last updated: 2026-03-19 01:25 UTC*
 
 
 
@@ -67,6 +67,13 @@
 - [fix: add oa-atomacos dependency for macOS window capture](https://github.com/OpenAdaptAI/openadapt-capture/pull/16) (#16) — merged 
 
 - [fix: browser capture end-to-end pipeline](https://github.com/OpenAdaptAI/openadapt-capture/pull/15) (#15) — merged 
+
+
+
+## openadapt-wright
+
+
+- [fix: bot wakes worker after job insert](https://github.com/OpenAdaptAI/openadapt-wright/pull/22) (#22) — merged 
 
 
 
