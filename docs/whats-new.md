@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-18 23:58 UTC*
+> *Last updated: 2026-03-19 00:08 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add execution trace report generator](https://github.com/OpenAdaptAI/openadapt-evals/pull/138) (#138) — merged 
 
 - [feat: add LocalAdapter and ScrubMiddleware for governed desktop agent](https://github.com/OpenAdaptAI/openadapt-evals/pull/137) (#137) — merged 
 
@@ -56,8 +58,6 @@
 - [docs: add example Flask server for HttpAgent protocol](https://github.com/OpenAdaptAI/openadapt-evals/pull/120) (#120) — merged 
 
 - [feat: register HttpAgent in CLI with --agent http](https://github.com/OpenAdaptAI/openadapt-evals/pull/119) (#119) — merged 
-
-- [feat: add HttpAgent, per-step evaluation, and lightweight trace export](https://github.com/OpenAdaptAI/openadapt-evals/pull/118) (#118) — merged 
 
 
 
