@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 22:48 UTC*
+> *Last updated: 2026-03-19 23:28 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [fix: move open-clip-torch to optional training dependencies](https://github.com/OpenAdaptAI/openadapt-evals/pull/150) (#150) — merged 
 
 - [fix: auto-detect evaluate_url, waa_examples_path, and screen resolution](https://github.com/OpenAdaptAI/openadapt-evals/pull/149) (#149) — merged 
 
@@ -57,8 +59,6 @@
 
 - [fix: wrap shell commands for /execute_windows and fix file_exists metric](https://github.com/OpenAdaptAI/openadapt-evals/pull/131) (#131) — merged 
 
-- [feat: add --correction-library and --enable-correction-capture CLI flags](https://github.com/OpenAdaptAI/openadapt-evals/pull/130) (#130) — merged 
-
 
 
 ## openadapt-capture
@@ -72,6 +72,8 @@
 
 ## openadapt-wright
 
+
+- [feat: add job detail and listing pages with real-time status](https://github.com/OpenAdaptAI/openadapt-wright/pull/27) (#27) — merged 
 
 - [feat: add heartbeat + bot-side reaper for worker reliability](https://github.com/OpenAdaptAI/openadapt-wright/pull/26) (#26) — merged 
 
