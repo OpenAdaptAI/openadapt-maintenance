@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 00:22 UTC*
+> *Last updated: 2026-03-19 00:25 UTC*
 
 
 
@@ -18,6 +18,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add AReaL AgentWorkflow wrapping WAADesktopEnv for RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/140) (#140) — merged 
 
 - [fix: update VLM judge prompt to recognize Windows 11 modern app UIs](https://github.com/OpenAdaptAI/openadapt-evals/pull/139) (#139) — merged 
 
@@ -56,8 +58,6 @@
 - [feat: add GiGPO anchor state computation to WAADesktopEnv](https://github.com/OpenAdaptAI/openadapt-evals/pull/122) (#122) — merged 
 
 - [docs: add experiment framework design document](https://github.com/OpenAdaptAI/openadapt-evals/pull/121) (#121) — merged 
-
-- [docs: add example Flask server for HttpAgent protocol](https://github.com/OpenAdaptAI/openadapt-evals/pull/120) (#120) — merged 
 
 
 
