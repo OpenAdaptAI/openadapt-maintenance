@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 23:29 UTC*
+> *Last updated: 2026-03-19 23:32 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [fix: make heavy ML dependencies optional for lightweight installs](https://github.com/OpenAdaptAI/openadapt-ml/pull/57) (#57) — merged 
 
 - [fix: use ResetConfig for RLEnvironment.reset() in validation script](https://github.com/OpenAdaptAI/openadapt-ml/pull/56) (#56) — merged 
 
