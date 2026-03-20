@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 16:19 UTC*
+> *Last updated: 2026-03-20 17:13 UTC*
 
 
 
@@ -20,6 +20,10 @@
 
 ## openadapt-evals
 
+
+- [feat: add full evaluation runner with resume support and pool integration](https://github.com/OpenAdaptAI/openadapt-evals/pull/160) (#160) — merged 
+
+- [feat: implement install_apps handler via winget for WAA task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/159) (#159) — merged 
 
 - [docs: comprehensive README update for planner-grounder, workflow, and training features](https://github.com/OpenAdaptAI/openadapt-evals/pull/158) (#158) — merged 
 
@@ -56,10 +60,6 @@
 - [feat: add workflow extraction Pydantic models, WAA adapter, and matching pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/142) (#142) — merged 
 
 - [fix: align trace report test assertions with reset-step behavior](https://github.com/OpenAdaptAI/openadapt-evals/pull/141) (#141) — merged 
-
-- [feat: add AReaL AgentWorkflow wrapping WAADesktopEnv for RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/140) (#140) — merged 
-
-- [fix: update VLM judge prompt to recognize Windows 11 modern app UIs](https://github.com/OpenAdaptAI/openadapt-evals/pull/139) (#139) — merged 
 
 
 
