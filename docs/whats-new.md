@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 01:37 UTC*
+> *Last updated: 2026-03-20 15:54 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add update_browse_history handler and fix verify_apps crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/156) (#156) — merged 
 
 - [fix: add dev extra to pyproject.toml and ensure CI passes](https://github.com/OpenAdaptAI/openadapt-evals/pull/155) (#155) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add execution trace report generator](https://github.com/OpenAdaptAI/openadapt-evals/pull/138) (#138) — merged 
 
 - [feat: add LocalAdapter and ScrubMiddleware for governed desktop agent](https://github.com/OpenAdaptAI/openadapt-evals/pull/137) (#137) — merged 
-
-- [feat: add PlannerCache for caching planner API responses during training](https://github.com/OpenAdaptAI/openadapt-evals/pull/136) (#136) — merged 
 
 
 
