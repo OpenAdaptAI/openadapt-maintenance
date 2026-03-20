@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 15:55 UTC*
+> *Last updated: 2026-03-20 16:10 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add all missing WAA config entry type handlers](https://github.com/OpenAdaptAI/openadapt-evals/pull/157) (#157) — merged 
 
 - [fix: add update_browse_history handler and fix verify_apps crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/156) (#156) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: update VLM judge prompt to recognize Windows 11 modern app UIs](https://github.com/OpenAdaptAI/openadapt-evals/pull/139) (#139) — merged 
 
 - [feat: add execution trace report generator](https://github.com/OpenAdaptAI/openadapt-evals/pull/138) (#138) — merged 
-
-- [feat: add LocalAdapter and ScrubMiddleware for governed desktop agent](https://github.com/OpenAdaptAI/openadapt-evals/pull/137) (#137) — merged 
 
 
 
