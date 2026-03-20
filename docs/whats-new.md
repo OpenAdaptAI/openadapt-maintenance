@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 17:15 UTC*
+> *Last updated: 2026-03-20 17:42 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add demo-guided execution and self-verification for 99% accuracy target](https://github.com/OpenAdaptAI/openadapt-evals/pull/161) (#161) — merged 
 
 - [feat: add full evaluation runner with resume support and pool integration](https://github.com/OpenAdaptAI/openadapt-evals/pull/160) (#160) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add workflow transcript generation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/143) (#143) — merged 
 
 - [feat: add workflow extraction Pydantic models, WAA adapter, and matching pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/142) (#142) — merged 
-
-- [fix: align trace report test assertions with reset-step behavior](https://github.com/OpenAdaptAI/openadapt-evals/pull/141) (#141) — merged 
 
 
 
