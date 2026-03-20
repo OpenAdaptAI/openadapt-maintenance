@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 17:43 UTC*
+> *Last updated: 2026-03-20 18:33 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use absolute path /entry.sh in Dockerfile CMD](https://github.com/OpenAdaptAI/openadapt-evals/pull/162) (#162) — merged 
 
 - [feat: add demo-guided execution and self-verification for 99% accuracy target](https://github.com/OpenAdaptAI/openadapt-evals/pull/161) (#161) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: use persistent storage for WAA data instead of ephemeral /mnt](https://github.com/OpenAdaptAI/openadapt-evals/pull/144) (#144) — merged 
 
 - [feat: add workflow transcript generation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/143) (#143) — merged 
-
-- [feat: add workflow extraction Pydantic models, WAA adapter, and matching pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/142) (#142) — merged 
 
 
 
