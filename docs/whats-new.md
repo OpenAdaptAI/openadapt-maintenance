@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 16:11 UTC*
+> *Last updated: 2026-03-20 16:19 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [docs: comprehensive README update for planner-grounder, workflow, and training features](https://github.com/OpenAdaptAI/openadapt-evals/pull/158) (#158) — merged 
 
 - [fix: add all missing WAA config entry type handlers](https://github.com/OpenAdaptAI/openadapt-evals/pull/157) (#157) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add AReaL AgentWorkflow wrapping WAADesktopEnv for RL training](https://github.com/OpenAdaptAI/openadapt-evals/pull/140) (#140) — merged 
 
 - [fix: update VLM judge prompt to recognize Windows 11 modern app UIs](https://github.com/OpenAdaptAI/openadapt-evals/pull/139) (#139) — merged 
-
-- [feat: add execution trace report generator](https://github.com/OpenAdaptAI/openadapt-evals/pull/138) (#138) — merged 
 
 
 
