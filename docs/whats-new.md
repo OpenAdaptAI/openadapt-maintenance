@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 00:45 UTC*
+> *Last updated: 2026-03-20 00:55 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add strict mode to prevent silent fallback degradation during benchmarking](https://github.com/OpenAdaptAI/openadapt-evals/pull/154) (#154) — merged 
 
 - [fix: dispatch task setup commands via /execute_windows instead of nonexistent /setup endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/153) (#153) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add PlannerCache for caching planner API responses during training](https://github.com/OpenAdaptAI/openadapt-evals/pull/136) (#136) — merged 
 
 - [feat: add PlannerTrajectoryLogger for SFT training data collection](https://github.com/OpenAdaptAI/openadapt-evals/pull/135) (#135) — merged 
-
-- [feat: add PlannerGrounderAgent for dual-model GUI automation](https://github.com/OpenAdaptAI/openadapt-evals/pull/134) (#134) — merged 
 
 
 
