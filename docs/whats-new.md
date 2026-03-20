@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 00:22 UTC*
+> *Last updated: 2026-03-20 00:45 UTC*
 
 
 
@@ -24,6 +24,8 @@
 - [fix: dispatch task setup commands via /execute_windows instead of nonexistent /setup endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/153) (#153) — merged 
 
 - [feat: add workflow extraction Pass 2 (transcript to structured workflow)](https://github.com/OpenAdaptAI/openadapt-evals/pull/152) (#152) — merged 
+
+- [docs: add openadapt-ml migration analysis report](https://github.com/OpenAdaptAI/openadapt-evals/pull/151) (#151) — merged 
 
 - [fix: move open-clip-torch to optional training dependencies](https://github.com/OpenAdaptAI/openadapt-evals/pull/150) (#150) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add PlannerTrajectoryLogger for SFT training data collection](https://github.com/OpenAdaptAI/openadapt-evals/pull/135) (#135) — merged 
 
 - [feat: add PlannerGrounderAgent for dual-model GUI automation](https://github.com/OpenAdaptAI/openadapt-evals/pull/134) (#134) — merged 
-
-- [fix: remove --entrypoint override so evaluate_server.py starts automatically](https://github.com/OpenAdaptAI/openadapt-evals/pull/133) (#133) — merged 
 
 
 
