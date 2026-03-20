@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 22:17 UTC*
+> *Last updated: 2026-03-20 22:24 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [docs: comprehensive usage documentation for eval runner, distillation, and demo-guided execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/166) (#166) — merged 
 
 - [docs: document --cap-add NET_ADMIN as required for WAA container networking](https://github.com/OpenAdaptAI/openadapt-evals/pull/165) (#165) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: replace Python patch script with shell script in Dockerfile](https://github.com/OpenAdaptAI/openadapt-evals/pull/147) (#147) — merged 
 
 - [fix: use structured planner output to prevent compound instruction drops](https://github.com/OpenAdaptAI/openadapt-evals/pull/146) (#146) — merged 
-
-- [fix: improve WAA VM infrastructure reliability](https://github.com/OpenAdaptAI/openadapt-evals/pull/145) (#145) — merged 
 
 
 
