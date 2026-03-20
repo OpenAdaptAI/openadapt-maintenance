@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 00:11 UTC*
+> *Last updated: 2026-03-20 00:21 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: dispatch task setup commands via /execute_windows instead of nonexistent /setup endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/153) (#153) — merged 
 
 - [feat: add workflow extraction Pass 2 (transcript to structured workflow)](https://github.com/OpenAdaptAI/openadapt-evals/pull/152) (#152) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add PlannerGrounderAgent for dual-model GUI automation](https://github.com/OpenAdaptAI/openadapt-evals/pull/134) (#134) — merged 
 
 - [fix: remove --entrypoint override so evaluate_server.py starts automatically](https://github.com/OpenAdaptAI/openadapt-evals/pull/133) (#133) — merged 
-
-- [feat: add WAA native JSON import to TaskConfig](https://github.com/OpenAdaptAI/openadapt-evals/pull/132) (#132) — merged 
 
 
 
