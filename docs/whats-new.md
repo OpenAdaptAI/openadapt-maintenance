@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 00:56 UTC*
+> *Last updated: 2026-03-20 01:36 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add dev extra to pyproject.toml and ensure CI passes](https://github.com/OpenAdaptAI/openadapt-evals/pull/155) (#155) — merged 
 
 - [fix: add strict mode to prevent silent fallback degradation during benchmarking](https://github.com/OpenAdaptAI/openadapt-evals/pull/154) (#154) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add LocalAdapter and ScrubMiddleware for governed desktop agent](https://github.com/OpenAdaptAI/openadapt-evals/pull/137) (#137) — merged 
 
 - [feat: add PlannerCache for caching planner API responses during training](https://github.com/OpenAdaptAI/openadapt-evals/pull/136) (#136) — merged 
-
-- [feat: add PlannerTrajectoryLogger for SFT training data collection](https://github.com/OpenAdaptAI/openadapt-evals/pull/135) (#135) — merged 
 
 
 
