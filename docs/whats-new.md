@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 18:38 UTC*
+> *Last updated: 2026-03-20 22:17 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [docs: document --cap-add NET_ADMIN as required for WAA container networking](https://github.com/OpenAdaptAI/openadapt-evals/pull/165) (#165) — merged 
 
 - [docs: add prior art citations to agent and training modules](https://github.com/OpenAdaptAI/openadapt-evals/pull/163) (#163) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: use structured planner output to prevent compound instruction drops](https://github.com/OpenAdaptAI/openadapt-evals/pull/146) (#146) — merged 
 
 - [fix: improve WAA VM infrastructure reliability](https://github.com/OpenAdaptAI/openadapt-evals/pull/145) (#145) — merged 
-
-- [fix: use persistent storage for WAA data instead of ephemeral /mnt](https://github.com/OpenAdaptAI/openadapt-evals/pull/144) (#144) — merged 
 
 
 
