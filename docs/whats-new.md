@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 18:34 UTC*
+> *Last updated: 2026-03-20 18:38 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [docs: add prior art citations to agent and training modules](https://github.com/OpenAdaptAI/openadapt-evals/pull/163) (#163) — merged 
 
 - [fix: use absolute path /entry.sh in Dockerfile CMD](https://github.com/OpenAdaptAI/openadapt-evals/pull/162) (#162) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: improve WAA VM infrastructure reliability](https://github.com/OpenAdaptAI/openadapt-evals/pull/145) (#145) — merged 
 
 - [fix: use persistent storage for WAA data instead of ephemeral /mnt](https://github.com/OpenAdaptAI/openadapt-evals/pull/144) (#144) — merged 
-
-- [feat: add workflow transcript generation pipeline](https://github.com/OpenAdaptAI/openadapt-evals/pull/143) (#143) — merged 
 
 
 
