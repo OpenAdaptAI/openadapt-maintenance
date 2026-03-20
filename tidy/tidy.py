@@ -10,6 +10,10 @@ Usage::
     python -m tidy scan-org  --org OpenAdaptAI --patterns tidy/patterns
     python -m tidy clean-org --org OpenAdaptAI --patterns tidy/patterns --replacement "Enterprise"
 
+    # Build artifact scanning/cleaning
+    python -m tidy scan-artifacts  --patterns tidy/patterns --repo owner/repo --types all
+    python -m tidy clean-artifacts --patterns tidy/patterns --repo owner/repo --types releases --confirm
+
 Or via the ``tidy`` console_script (if installed)::
 
     tidy scan --patterns tidy/patterns
@@ -29,6 +33,7 @@ from ._core import (
     cmd_ticket,
     cmd_verify,
 )
+from .artifacts._commands import cmd_clean_artifacts, cmd_scan_artifacts
 
 
 def _add_common_args(parser: argparse.ArgumentParser) -> None:
@@ -54,7 +59,10 @@ def _add_common_args(parser: argparse.ArgumentParser) -> None:
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="tidy",
-        description="Git-history scrubbing tool — scan, plan, clean, verify, ticket, scan-org, clean-org.",
+        description=(
+            "Git-history scrubbing tool — scan, plan, clean, verify, ticket, "
+            "scan-org, clean-org, scan-artifacts, clean-artifacts."
+        ),
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -248,6 +256,110 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Skip confirmation prompt.",
     )
 
+    # ── scan-artifacts ─────────────────────────────────────────────
+    p_scan_art = sub.add_parser(
+        "scan-artifacts",
+        help="Scan build artifacts (releases, actions, PyPI, GHCR) for patterns.",
+    )
+    _add_common_args(p_scan_art)
+    p_scan_art.add_argument(
+        "--repo",
+        required=True,
+        help="GitHub repo in owner/repo format.",
+    )
+    p_scan_art.add_argument(
+        "--types",
+        nargs="+",
+        default=["all"],
+        choices=["all", "releases", "actions", "pypi", "docker"],
+        help=(
+            "Artifact types to scan (default: all). "
+            "Options: releases, actions, pypi, docker, all."
+        ),
+    )
+    p_scan_art.add_argument(
+        "--package",
+        default=None,
+        help="PyPI package name (default: inferred from repo name).",
+    )
+    p_scan_art.add_argument(
+        "--max-runs",
+        type=int,
+        default=100,
+        help="Max workflow runs to scan logs for (default: 100).",
+    )
+    p_scan_art.add_argument(
+        "--max-artifacts",
+        type=int,
+        default=200,
+        help="Max workflow artifacts to scan (default: 200).",
+    )
+    p_scan_art.add_argument(
+        "--json",
+        action="store_true",
+        default=False,
+        help="Output results as JSON.",
+    )
+
+    # ── clean-artifacts ────────────────────────────────────────────
+    p_clean_art = sub.add_parser(
+        "clean-artifacts",
+        help="Scan and clean build artifacts containing sensitive patterns.",
+    )
+    _add_common_args(p_clean_art)
+    p_clean_art.add_argument(
+        "--repo",
+        required=True,
+        help="GitHub repo in owner/repo format.",
+    )
+    p_clean_art.add_argument(
+        "--types",
+        nargs="+",
+        default=["all"],
+        choices=["all", "releases", "actions", "pypi", "docker"],
+        help=(
+            "Artifact types to clean (default: all). "
+            "Options: releases, actions, pypi, docker, all."
+        ),
+    )
+    p_clean_art.add_argument(
+        "--package",
+        default=None,
+        help="PyPI package name (default: inferred from repo name).",
+    )
+    p_clean_art.add_argument(
+        "--replacement",
+        default="[REDACTED]",
+        help="Replacement text for redaction (default: [REDACTED]).",
+    )
+    p_clean_art.add_argument(
+        "--confirm",
+        action="store_true",
+        default=False,
+        help=(
+            "Actually perform deletions/redactions. Without this flag, "
+            "only a dry-run report is generated."
+        ),
+    )
+    p_clean_art.add_argument(
+        "--yes", "-y",
+        action="store_true",
+        default=False,
+        help="Skip confirmation prompt (still requires --confirm to act).",
+    )
+    p_clean_art.add_argument(
+        "--max-runs",
+        type=int,
+        default=100,
+        help="Max workflow runs to scan logs for (default: 100).",
+    )
+    p_clean_art.add_argument(
+        "--max-artifacts",
+        type=int,
+        default=200,
+        help="Max workflow artifacts to scan (default: 200).",
+    )
+
     return parser
 
 
@@ -264,6 +376,8 @@ def main(argv: list[str] | None = None) -> None:
         "ticket": cmd_ticket,
         "scan-org": cmd_scan_org,
         "clean-org": cmd_clean_org,
+        "scan-artifacts": cmd_scan_artifacts,
+        "clean-artifacts": cmd_clean_artifacts,
     }
 
     handler = dispatch.get(args.command)
