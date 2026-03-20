@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-19 23:36 UTC*
+> *Last updated: 2026-03-20 00:10 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add workflow extraction Pass 2 (transcript to structured workflow)](https://github.com/OpenAdaptAI/openadapt-evals/pull/152) (#152) — merged 
 
 - [fix: move open-clip-torch to optional training dependencies](https://github.com/OpenAdaptAI/openadapt-evals/pull/150) (#150) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: remove --entrypoint override so evaluate_server.py starts automatically](https://github.com/OpenAdaptAI/openadapt-evals/pull/133) (#133) — merged 
 
 - [feat: add WAA native JSON import to TaskConfig](https://github.com/OpenAdaptAI/openadapt-evals/pull/132) (#132) — merged 
-
-- [fix: wrap shell commands for /execute_windows and fix file_exists metric](https://github.com/OpenAdaptAI/openadapt-evals/pull/131) (#131) — merged 
 
 
 
