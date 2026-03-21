@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 18:59 UTC*
+> *Last updated: 2026-03-21 19:00 UTC*
 
 
 
