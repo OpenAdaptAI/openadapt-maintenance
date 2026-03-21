@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 19:00 UTC*
+> *Last updated: 2026-03-21 19:17 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add monotonic progress bias and pluggable alignment strategy to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/176) (#176) — merged 
 
 - [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: add update_browse_history handler and fix verify_apps crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/156) (#156) — merged 
 
 - [fix: add dev extra to pyproject.toml and ensure CI passes](https://github.com/OpenAdaptAI/openadapt-evals/pull/155) (#155) — merged 
-
-- [fix: add strict mode to prevent silent fallback degradation during benchmarking](https://github.com/OpenAdaptAI/openadapt-evals/pull/154) (#154) — merged 
 
 
 
