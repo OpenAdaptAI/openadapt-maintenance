@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 16:29 UTC*
+> *Last updated: 2026-03-21 17:18 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: update default planner model to gpt-5.4](https://github.com/OpenAdaptAI/openadapt-evals/pull/170) (#170) — merged 
 
 - [fix: reduce cleanup timeouts and make verify_apps non-fatal](https://github.com/OpenAdaptAI/openadapt-evals/pull/169) (#169) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: move open-clip-torch to optional training dependencies](https://github.com/OpenAdaptAI/openadapt-evals/pull/150) (#150) — merged 
 
 - [fix: auto-detect evaluate_url, waa_examples_path, and screen resolution](https://github.com/OpenAdaptAI/openadapt-evals/pull/149) (#149) — merged 
-
-- [fix(agent): add double_click support and anti-loop recovery](https://github.com/OpenAdaptAI/openadapt-evals/pull/148) (#148) — merged 
 
 
 
