@@ -76,54 +76,44 @@ class GitHubReleasesScanner(ArtifactScanner):
             return []
         return data
 
-    def _download_asset(self, asset_url: str, dest_path: str) -> bool:
-        """Download a release asset to *dest_path*.
+    def _download_asset_binary(self, asset_id: int, dest_path: str) -> bool:
+        """Download a release asset as binary using ``gh api``.
 
-        Uses ``gh api`` with the octet-stream accept header to download
-        binary assets.
+        GitHub release asset downloads require:
+        1. ``Accept: application/octet-stream`` header to get the raw binary
+           (otherwise the API returns JSON metadata).
+        2. Binary-mode I/O — ``text=True`` would corrupt non-UTF-8 content.
+
+        ``gh api`` handles authentication automatically and follows the
+        redirect that GitHub's asset endpoint returns.
         """
+        import subprocess as _sp
+
         try:
-            result = _gh_api(
-                asset_url,
-                accept="application/octet-stream",
+            cmd = [
+                "gh", "api",
+                f"/repos/{self.repo}/releases/assets/{asset_id}",
+                "-H", "Accept: application/octet-stream",
+            ]
+            result = _sp.run(
+                cmd,
+                capture_output=True,
+                text=False,  # binary mode — crucial for non-text assets
                 check=False,
             )
             if result.returncode != 0:
-                log(f"Failed to download asset {asset_url}: {result.stderr}", level="WARN")
+                stderr = result.stderr.decode("utf-8", errors="replace") if result.stderr else ""
+                log(
+                    f"Failed to download asset {asset_id}: {stderr.strip()}",
+                    level="WARN",
+                )
                 return False
-            with open(dest_path, "w", encoding="utf-8", errors="replace") as f:
+            if not result.stdout:
+                log(f"Empty response for asset {asset_id}", level="WARN")
+                return False
+            with open(dest_path, "wb") as f:
                 f.write(result.stdout)
             return True
-        except Exception as exc:
-            log(f"Error downloading asset {asset_url}: {exc}", level="WARN")
-            return False
-
-    def _download_asset_binary(self, asset_id: int, dest_path: str) -> bool:
-        """Download a release asset as binary using gh CLI."""
-        try:
-            result = run_cmd(
-                [
-                    "gh", "release", "download",
-                    "--repo", self.repo,
-                    "--pattern", "*",
-                    "--dir", os.path.dirname(dest_path),
-                    "--clobber",
-                ],
-                check=False,
-            )
-            # Fallback: use curl with the gh token
-            if result.returncode != 0:
-                # Use the direct API download
-                result = run_cmd(
-                    [
-                        "gh", "api",
-                        f"/repos/{self.repo}/releases/assets/{asset_id}",
-                        "-H", "Accept: application/octet-stream",
-                        "--output", dest_path,
-                    ],
-                    check=False,
-                )
-            return result.returncode == 0
         except Exception as exc:
             log(f"Error downloading asset {asset_id}: {exc}", level="WARN")
             return False
