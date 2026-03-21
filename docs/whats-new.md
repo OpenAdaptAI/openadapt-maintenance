@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 19:22 UTC*
+> *Last updated: 2026-03-21 19:54 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [fix: use keyword args for Qwen VL processor call](https://github.com/OpenAdaptAI/openadapt-ml/pull/58) (#58) — merged 
 
 - [fix: make heavy ML dependencies optional for lightweight installs](https://github.com/OpenAdaptAI/openadapt-ml/pull/57) (#57) — merged 
 
