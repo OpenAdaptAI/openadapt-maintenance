@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 18:40 UTC*
+> *Last updated: 2026-03-21 18:47 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
 
 - [feat: add visual similarity alignment to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/174) (#174) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: add dev extra to pyproject.toml and ensure CI passes](https://github.com/OpenAdaptAI/openadapt-evals/pull/155) (#155) — merged 
 
 - [fix: add strict mode to prevent silent fallback degradation during benchmarking](https://github.com/OpenAdaptAI/openadapt-evals/pull/154) (#154) — merged 
-
-- [fix: dispatch task setup commands via /execute_windows instead of nonexistent /setup endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/153) (#153) — merged 
 
 
 
