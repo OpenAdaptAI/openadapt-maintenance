@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 19:17 UTC*
+> *Last updated: 2026-03-21 19:18 UTC*
 
 
 
@@ -20,6 +20,10 @@
 
 ## openadapt-evals
 
+
+- [fix: replace AutoModelForVision2Seq with AutoModelForImageTextToText for transformers 5.x](https://github.com/OpenAdaptAI/openadapt-evals/pull/178) (#178) — merged 
+
+- [fix: skip verify_apps, close_all, activate_window in lightweight mode](https://github.com/OpenAdaptAI/openadapt-evals/pull/177) (#177) — merged 
 
 - [feat: add monotonic progress bias and pluggable alignment strategy to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/176) (#176) — merged 
 
@@ -56,10 +60,6 @@
 - [docs: comprehensive README update for planner-grounder, workflow, and training features](https://github.com/OpenAdaptAI/openadapt-evals/pull/158) (#158) — merged 
 
 - [fix: add all missing WAA config entry type handlers](https://github.com/OpenAdaptAI/openadapt-evals/pull/157) (#157) — merged 
-
-- [fix: add update_browse_history handler and fix verify_apps crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/156) (#156) — merged 
-
-- [fix: add dev extra to pyproject.toml and ensure CI passes](https://github.com/OpenAdaptAI/openadapt-evals/pull/155) (#155) — merged 
 
 
 
