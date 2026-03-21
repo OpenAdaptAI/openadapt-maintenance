@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 01:07 UTC*
+> *Last updated: 2026-03-21 16:28 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: reduce cleanup timeouts and make verify_apps non-fatal](https://github.com/OpenAdaptAI/openadapt-evals/pull/169) (#169) — merged 
 
 - [feat: add VLM element description enrichment and resolution normalization to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/168) (#168) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: auto-detect evaluate_url, waa_examples_path, and screen resolution](https://github.com/OpenAdaptAI/openadapt-evals/pull/149) (#149) — merged 
 
 - [fix(agent): add double_click support and anti-loop recovery](https://github.com/OpenAdaptAI/openadapt-evals/pull/148) (#148) — merged 
-
-- [fix: replace Python patch script with shell script in Dockerfile](https://github.com/OpenAdaptAI/openadapt-evals/pull/147) (#147) — merged 
 
 
 
