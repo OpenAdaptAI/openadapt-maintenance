@@ -1,21 +1,26 @@
-# tidy — Git History Scrubbing Tool
+# tidy — Git History & Build Artifact Scrubbing Tool
 
 A CLI tool for scanning, planning, executing, verifying, and reporting
-git-history rewrites to remove sensitive patterns from commit messages and
-file contents.
+git-history rewrites to remove sensitive patterns from commit messages,
+file contents, and **build artifacts** (GitHub Releases, GitHub Actions,
+PyPI packages, and Docker/GHCR container images).
 
 ## Prerequisites
 
 - Python 3.10+
 - `git-filter-repo` (install via `pip install git-filter-repo`)
-- `gh` CLI (for GitHub API operations: fork enumeration, branch protection, verification)
+- `gh` CLI (for GitHub API operations: fork enumeration, branch protection, verification, artifact scanning)
+- `curl` (for PyPI package downloads)
 
 ## Setup
 
 1. Create a patterns file at `tidy/patterns` with one sensitive
    string per line.  Lines starting with `#` are comments.
 
-   See `tidy/patterns.example` for the format.
+   Per-pattern case-sensitivity can be controlled with prefixes:
+   - `cs:Acme Corp` — force case-sensitive matching
+   - `ci:acme` — force case-insensitive matching
+   - `Acme Corp` — uses the default (case-insensitive unless `--case-sensitive`)
 
 2. Ensure `tidy/patterns` is listed in `.gitignore` (the tool
    enforces this as a safety check).
@@ -104,7 +109,98 @@ python -m tidy ticket --shas abc123 def456 [--branches main] [--output ticket.tx
 - `--branches`: affected branch names (default: auto-detect).
 - `--output` / `-o`: write to file instead of stdout.
 
+### scan-org
+
+Scan all public repos in a GitHub organization for sensitive patterns.
+Clones each repo into a temp directory (or reuses existing clones) and
+runs the same commit/file scan as `scan`.
+
+```
+python -m tidy scan-org --org OpenAdaptAI --patterns tidy/patterns [--clone-dir /tmp/repos] [--include-private] [--json]
+```
+
+- `--org` (required): GitHub organization name.
+- `--clone-dir`: directory to clone repos into (default: temp dir).
+- `--include-private`: also scan private repos (default: public only).
+- `--json`: output results as JSON.
+
+### clean-org
+
+Scan + clean all affected repos in a GitHub organization.  Runs the full
+`clean` pipeline on each repo that contains matches.
+
+```
+python -m tidy clean-org --org OpenAdaptAI --patterns tidy/patterns --replacement "[REDACTED]" [--clone-dir /tmp/repos] [--yes]
+```
+
+- `--org` (required): GitHub organization name.
+- `--include-private`: also clean private repos.
+- `--yes` / `-y`: skip confirmation prompt.
+
+### scan-artifacts
+
+Scan build artifacts across GitHub Releases, GitHub Actions, PyPI, and
+Docker/GHCR for sensitive patterns.  This is a **read-only** operation
+that downloads and inspects artifacts without modifying anything.
+
+```
+python -m tidy scan-artifacts --patterns tidy/patterns --repo owner/repo --types all [--json]
+python -m tidy scan-artifacts --patterns tidy/patterns --repo owner/repo --types releases actions
+python -m tidy scan-artifacts --patterns tidy/patterns --repo owner/repo --types pypi --package my-package
+```
+
+- `--repo` (required): GitHub repo in `owner/repo` format.
+- `--types`: artifact types to scan (default: `all`).
+  Options: `releases`, `actions`, `pypi`, `docker`, `all`.
+- `--package`: PyPI package name (default: inferred from repo name).
+- `--max-runs`: max workflow runs to scan logs for (default: 100).
+- `--max-artifacts`: max workflow artifacts to scan (default: 200).
+- `--json`: output results as JSON (to stdout).
+
+**What each scanner checks:**
+
+| Type | What it scans |
+|------|---------------|
+| `releases` | Release body text (markdown) + downloaded release assets (text files, zip/tar/whl archives) |
+| `actions` | Workflow artifact zips + workflow run log zips |
+| `pypi` | All published wheels and sdists — downloads and extracts each |
+| `docker` | Container package version tags and metadata; flags images built from affected commit SHAs |
+
+### clean-artifacts
+
+Scan and clean build artifacts containing sensitive patterns.  Runs in
+**dry-run mode** by default — pass `--confirm` to actually delete/redact.
+
+```
+# Dry-run (report only, no changes)
+python -m tidy clean-artifacts --patterns tidy/patterns --repo owner/repo --types all
+
+# Actually clean (with confirmation prompt)
+python -m tidy clean-artifacts --patterns tidy/patterns --repo owner/repo --types releases --confirm
+
+# Actually clean (skip prompt)
+python -m tidy clean-artifacts --patterns tidy/patterns --repo owner/repo --types all --confirm --yes
+```
+
+- `--repo` (required): GitHub repo in `owner/repo` format.
+- `--types`: artifact types to clean (default: `all`).
+- `--confirm`: actually perform deletions/redactions.  Without this flag
+  only a dry-run report is generated.
+- `--yes` / `-y`: skip the confirmation prompt (still requires `--confirm`).
+- `--replacement`: replacement text for redaction (default: `[REDACTED]`).
+
+**Cleaning actions by type:**
+
+| Type | Action |
+|------|--------|
+| `releases` | Redacts release body text (PATCH) + deletes contaminated assets |
+| `actions` | Deletes workflow artifacts + deletes workflow run logs |
+| `pypi` | Yanks affected versions (requires `PYPI_API_TOKEN` env var). Notes: yanking hides from default `pip install` but the version remains downloadable with explicit pinning. For full deletion after 72 hours, contact `security@pypi.org`. |
+| `docker` | Deletes container package versions by ID |
+
 ## Typical Workflow
+
+### Git history scrubbing
 
 ```bash
 # 1. Scan for matches
@@ -121,4 +217,36 @@ python -m tidy verify --patterns tidy/patterns --remote
 
 # 5. Generate GitHub Support ticket for cache purge
 python -m tidy ticket --commit-map /tmp/tidy-mirror-*/repo.git/filter-repo/commit-map -o ticket.txt
+```
+
+### Organization-wide scan
+
+```bash
+# Scan all public repos in the org
+python -m tidy scan-org --org OpenAdaptAI --patterns tidy/patterns
+
+# Clean all affected repos
+python -m tidy clean-org --org OpenAdaptAI --patterns tidy/patterns --replacement "[REDACTED]"
+```
+
+### Build artifact scanning
+
+After scrubbing git history, you should also check build artifacts that
+may have been produced from the pre-scrub commits:
+
+```bash
+# 6. Scan all artifact types for a repo
+python -m tidy scan-artifacts --patterns tidy/patterns --repo OpenAdaptAI/openadapt-evals --types all
+
+# 7. Dry-run clean (see what would be deleted)
+python -m tidy clean-artifacts --patterns tidy/patterns --repo OpenAdaptAI/openadapt-evals --types all
+
+# 8. Actually clean (with confirmation)
+python -m tidy clean-artifacts --patterns tidy/patterns --repo OpenAdaptAI/openadapt-evals --types all --confirm
+
+# Scan specific artifact types only
+python -m tidy scan-artifacts --patterns tidy/patterns --repo OpenAdaptAI/openadapt-ml --types releases actions
+
+# Scan PyPI with explicit package name
+python -m tidy scan-artifacts --patterns tidy/patterns --repo OpenAdaptAI/openadapt --types pypi --package openadapt
 ```
