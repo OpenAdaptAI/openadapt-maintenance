@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 17:45 UTC*
+> *Last updated: 2026-03-21 17:46 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 
 - [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
+
+- [feat: add trace analysis utilities with HTML report generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/172) (#172) — merged 
 
 - [fix: make task instruction more prominent in planner prompt](https://github.com/OpenAdaptAI/openadapt-evals/pull/171) (#171) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: dispatch task setup commands via /execute_windows instead of nonexistent /setup endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/153) (#153) — merged 
 
 - [feat: add workflow extraction Pass 2 (transcript to structured workflow)](https://github.com/OpenAdaptAI/openadapt-evals/pull/152) (#152) — merged 
-
-- [docs: add openadapt-ml migration analysis report](https://github.com/OpenAdaptAI/openadapt-evals/pull/151) (#151) — merged 
 
 
 
