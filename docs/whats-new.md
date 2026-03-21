@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 17:35 UTC*
+> *Last updated: 2026-03-21 17:45 UTC*
 
 
 
@@ -20,6 +20,10 @@
 
 ## openadapt-evals
 
+
+- [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
+
+- [fix: make task instruction more prominent in planner prompt](https://github.com/OpenAdaptAI/openadapt-evals/pull/171) (#171) — merged 
 
 - [feat: update default planner model to gpt-5.4](https://github.com/OpenAdaptAI/openadapt-evals/pull/170) (#170) — merged 
 
@@ -56,10 +60,6 @@
 - [feat: add workflow extraction Pass 2 (transcript to structured workflow)](https://github.com/OpenAdaptAI/openadapt-evals/pull/152) (#152) — merged 
 
 - [docs: add openadapt-ml migration analysis report](https://github.com/OpenAdaptAI/openadapt-evals/pull/151) (#151) — merged 
-
-- [fix: move open-clip-torch to optional training dependencies](https://github.com/OpenAdaptAI/openadapt-evals/pull/150) (#150) — merged 
-
-- [fix: auto-detect evaluate_url, waa_examples_path, and screen resolution](https://github.com/OpenAdaptAI/openadapt-evals/pull/149) (#149) — merged 
 
 
 
