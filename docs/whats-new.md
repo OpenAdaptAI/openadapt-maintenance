@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 20:27 UTC*
+> *Last updated: 2026-03-21 22:27 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add OpenAI embedding-based alignment strategy for DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/179) (#179) — merged 
 
 - [fix: replace AutoModelForVision2Seq with AutoModelForImageTextToText for transformers 5.x](https://github.com/OpenAdaptAI/openadapt-evals/pull/178) (#178) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: implement install_apps handler via winget for WAA task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/159) (#159) — merged 
 
 - [docs: comprehensive README update for planner-grounder, workflow, and training features](https://github.com/OpenAdaptAI/openadapt-evals/pull/158) (#158) — merged 
-
-- [fix: add all missing WAA config entry type handlers](https://github.com/OpenAdaptAI/openadapt-evals/pull/157) (#157) — merged 
 
 
 
