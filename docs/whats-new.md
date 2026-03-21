@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-20 22:24 UTC*
+> *Last updated: 2026-03-21 01:06 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add VLM element description enrichment and resolution normalization to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/168) (#168) — merged 
 
 - [docs: comprehensive usage documentation for eval runner, distillation, and demo-guided execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/166) (#166) — merged 
 
@@ -58,8 +60,6 @@
 - [fix(agent): add double_click support and anti-loop recovery](https://github.com/OpenAdaptAI/openadapt-evals/pull/148) (#148) — merged 
 
 - [fix: replace Python patch script with shell script in Dockerfile](https://github.com/OpenAdaptAI/openadapt-evals/pull/147) (#147) — merged 
-
-- [fix: use structured planner output to prevent compound instruction drops](https://github.com/OpenAdaptAI/openadapt-evals/pull/146) (#146) — merged 
 
 
 
