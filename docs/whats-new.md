@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-21 22:28 UTC*
+> *Last updated: 2026-03-22 03:15 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [fix: include image placeholder in chat template for VLM GRPO training](https://github.com/OpenAdaptAI/openadapt-ml/pull/59) (#59) — merged 
 
 - [fix: use keyword args for Qwen VL processor call](https://github.com/OpenAdaptAI/openadapt-ml/pull/58) (#58) — merged 
 
