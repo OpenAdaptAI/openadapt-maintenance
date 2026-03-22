@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 04:46 UTC*
+> *Last updated: 2026-03-22 06:09 UTC*
 
 
 
@@ -24,6 +24,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add vm_ip to MockEnv in evaluate_server.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/181) (#181) — merged 
 
 - [feat: add OpenAI embedding-based alignment strategy for DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/179) (#179) — merged 
 
@@ -62,8 +64,6 @@
 - [feat: add full evaluation runner with resume support and pool integration](https://github.com/OpenAdaptAI/openadapt-evals/pull/160) (#160) — merged 
 
 - [feat: implement install_apps handler via winget for WAA task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/159) (#159) — merged 
-
-- [docs: comprehensive README update for planner-grounder, workflow, and training features](https://github.com/OpenAdaptAI/openadapt-evals/pull/158) (#158) — merged 
 
 
 
