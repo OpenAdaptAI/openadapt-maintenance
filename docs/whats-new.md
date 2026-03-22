@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 16:54 UTC*
+> *Last updated: 2026-03-22 17:20 UTC*
 
 
 
@@ -26,6 +26,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add checkpoint evaluation script for GRPO before/after comparison](https://github.com/OpenAdaptAI/openadapt-evals/pull/183) (#183) — merged 
 
 - [feat: add evaluate_milestones_screenshot for client-side reward computation](https://github.com/OpenAdaptAI/openadapt-evals/pull/182) (#182) — merged 
 
@@ -64,8 +66,6 @@
 - [fix: use absolute path /entry.sh in Dockerfile CMD](https://github.com/OpenAdaptAI/openadapt-evals/pull/162) (#162) — merged 
 
 - [feat: add demo-guided execution and self-verification for 99% accuracy target](https://github.com/OpenAdaptAI/openadapt-evals/pull/161) (#161) — merged 
-
-- [feat: add full evaluation runner with resume support and pool integration](https://github.com/OpenAdaptAI/openadapt-evals/pull/160) (#160) — merged 
 
 
 
