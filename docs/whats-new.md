@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 16:52 UTC*
+> *Last updated: 2026-03-22 16:54 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [feat: add --task-dir support for milestone-based rewards in standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-ml/pull/60) (#60) — merged 
 
 - [fix: include image placeholder in chat template for VLM GRPO training](https://github.com/OpenAdaptAI/openadapt-ml/pull/59) (#59) — merged 
 
