@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 22:18 UTC*
+> *Last updated: 2026-03-22 22:44 UTC*
 
 
 
@@ -28,6 +28,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add end-to-end correction flywheel demonstration script](https://github.com/OpenAdaptAI/openadapt-evals/pull/185) (#185) — merged 
 
 - [feat: improve TraceAnalyzer HTML report with embedded screenshots and failure analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/184) (#184) — merged 
 
@@ -66,8 +68,6 @@
 - [docs: document --cap-add NET_ADMIN as required for WAA container networking](https://github.com/OpenAdaptAI/openadapt-evals/pull/165) (#165) — merged 
 
 - [docs: add prior art citations to agent and training modules](https://github.com/OpenAdaptAI/openadapt-evals/pull/163) (#163) — merged 
-
-- [fix: use absolute path /entry.sh in Dockerfile CMD](https://github.com/OpenAdaptAI/openadapt-evals/pull/162) (#162) — merged 
 
 
 
