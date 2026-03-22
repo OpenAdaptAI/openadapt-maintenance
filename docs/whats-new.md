@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 17:21 UTC*
+> *Last updated: 2026-03-22 19:08 UTC*
 
 
 
@@ -26,6 +26,8 @@
 
 ## openadapt-evals
 
+
+- [feat: improve TraceAnalyzer HTML report with embedded screenshots and failure analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/184) (#184) — merged 
 
 - [feat: add checkpoint evaluation script for GRPO before/after comparison](https://github.com/OpenAdaptAI/openadapt-evals/pull/183) (#183) — merged 
 
@@ -64,8 +66,6 @@
 - [docs: add prior art citations to agent and training modules](https://github.com/OpenAdaptAI/openadapt-evals/pull/163) (#163) — merged 
 
 - [fix: use absolute path /entry.sh in Dockerfile CMD](https://github.com/OpenAdaptAI/openadapt-evals/pull/162) (#162) — merged 
-
-- [feat: add demo-guided execution and self-verification for 99% accuracy target](https://github.com/OpenAdaptAI/openadapt-evals/pull/161) (#161) — merged 
 
 
 
