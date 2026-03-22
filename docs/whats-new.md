@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-22 06:10 UTC*
+> *Last updated: 2026-03-22 16:52 UTC*
 
 
 
@@ -24,6 +24,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add evaluate_milestones_screenshot for client-side reward computation](https://github.com/OpenAdaptAI/openadapt-evals/pull/182) (#182) — merged 
 
 - [fix: add vm_ip to MockEnv in evaluate_server.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/181) (#181) — merged 
 
@@ -62,8 +64,6 @@
 - [feat: add demo-guided execution and self-verification for 99% accuracy target](https://github.com/OpenAdaptAI/openadapt-evals/pull/161) (#161) — merged 
 
 - [feat: add full evaluation runner with resume support and pool integration](https://github.com/OpenAdaptAI/openadapt-evals/pull/160) (#160) — merged 
-
-- [feat: implement install_apps handler via winget for WAA task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/159) (#159) — merged 
 
 
 
