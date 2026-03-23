@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-23 10:06 UTC*
+> *Last updated: 2026-03-23 15:49 UTC*
 
 
 
@@ -28,6 +28,8 @@
 
 ## openadapt-evals
 
+
+- [fix: address flywheel regression bugs (VM reset, demo validation, alignment)](https://github.com/OpenAdaptAI/openadapt-evals/pull/187) (#187) — merged 
 
 - [feat: automate full VM lifecycle in correction flywheel script](https://github.com/OpenAdaptAI/openadapt-evals/pull/186) (#186) — merged 
 
@@ -66,8 +68,6 @@
 - [feat: add VLM element description enrichment and resolution normalization to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/168) (#168) — merged 
 
 - [docs: comprehensive usage documentation for eval runner, distillation, and demo-guided execution](https://github.com/OpenAdaptAI/openadapt-evals/pull/166) (#166) — merged 
-
-- [docs: document --cap-add NET_ADMIN as required for WAA container networking](https://github.com/OpenAdaptAI/openadapt-evals/pull/165) (#165) — merged 
 
 
 
