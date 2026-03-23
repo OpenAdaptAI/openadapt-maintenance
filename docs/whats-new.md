@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-23 19:45 UTC*
+> *Last updated: 2026-03-23 19:58 UTC*
 
 
 
@@ -30,6 +30,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add GPU instance lifecycle CLI for model serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/189) (#189) — merged 
 
 - [feat: add systematic model comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/188) (#188) — merged 
 
@@ -68,8 +70,6 @@
 - [feat: update default planner model to gpt-5.4](https://github.com/OpenAdaptAI/openadapt-evals/pull/170) (#170) — merged 
 
 - [fix: reduce cleanup timeouts and make verify_apps non-fatal](https://github.com/OpenAdaptAI/openadapt-evals/pull/169) (#169) — merged 
-
-- [feat: add VLM element description enrichment and resolution normalization to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/168) (#168) — merged 
 
 
 
