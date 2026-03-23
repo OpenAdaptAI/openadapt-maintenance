@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-23 15:50 UTC*
+> *Last updated: 2026-03-23 18:50 UTC*
 
 
 
 ## openadapt-ml
 
+
+- [fix: increase max_new_tokens to 2048 and make configurable via GRPOConfig](https://github.com/OpenAdaptAI/openadapt-ml/pull/62) (#62) — merged 
 
 - [fix: align GRPO prompt format with SFT training format](https://github.com/OpenAdaptAI/openadapt-ml/pull/61) (#61) — merged 
 
