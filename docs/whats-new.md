@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-23 20:33 UTC*
+> *Last updated: 2026-03-24 02:27 UTC*
 
 
 
@@ -30,6 +30,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add comprehensive API and infrastructure cost tracking](https://github.com/OpenAdaptAI/openadapt-evals/pull/192) (#192) — merged 
 
 - [feat: add standalone GRPO trainer with WAADirect (no openadapt-ml dependency)](https://github.com/OpenAdaptAI/openadapt-evals/pull/191) (#191) — merged 
 
@@ -68,8 +70,6 @@
 - [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
 
 - [feat: add trace analysis utilities with HTML report generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/172) (#172) — merged 
-
-- [fix: make task instruction more prominent in planner prompt](https://github.com/OpenAdaptAI/openadapt-evals/pull/171) (#171) — merged 
 
 
 
