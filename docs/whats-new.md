@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-24 02:29 UTC*
+> *Last updated: 2026-03-24 04:07 UTC*
 
 
 
@@ -30,6 +30,8 @@
 
 ## openadapt-evals
 
+
+- [fix: align standalone GRPO with WAA API format and add retry logic](https://github.com/OpenAdaptAI/openadapt-evals/pull/193) (#193) — merged 
 
 - [feat: add comprehensive API and infrastructure cost tracking](https://github.com/OpenAdaptAI/openadapt-evals/pull/192) (#192) — merged 
 
@@ -68,8 +70,6 @@
 - [feat: add visual similarity alignment to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/174) (#174) — merged 
 
 - [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
-
-- [feat: add trace analysis utilities with HTML report generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/172) (#172) — merged 
 
 
 
