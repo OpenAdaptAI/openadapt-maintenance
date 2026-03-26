@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-26 16:33 UTC*
+> *Last updated: 2026-03-26 21:07 UTC*
 
 
 
@@ -24,6 +24,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add desktop cleanup, manual demo tools, and fix trainer OOM bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/195) (#195) — merged 
 
 - [fix: switch distillation collection to WAADirect for reliable task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/194) (#194) — merged 
 
@@ -62,8 +64,6 @@
 - [feat: add monotonic progress bias and pluggable alignment strategy to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/176) (#176) — merged 
 
 - [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
-
-- [feat: add visual similarity alignment to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/174) (#174) — merged 
 
 
 
