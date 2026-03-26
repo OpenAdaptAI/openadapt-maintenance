@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-26 16:26 UTC*
+> *Last updated: 2026-03-26 16:32 UTC*
 
 
 
@@ -24,6 +24,8 @@
 
 ## openadapt-evals
 
+
+- [fix: switch distillation collection to WAADirect for reliable task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/194) (#194) — merged 
 
 - [fix: align standalone GRPO with WAA API format and add retry logic](https://github.com/OpenAdaptAI/openadapt-evals/pull/193) (#193) — merged 
 
@@ -62,8 +64,6 @@
 - [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
 
 - [feat: add visual similarity alignment to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/174) (#174) — merged 
-
-- [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
 
 
 
