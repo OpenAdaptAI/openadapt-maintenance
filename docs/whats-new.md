@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-24 21:32 UTC*
+> *Last updated: 2026-03-26 16:25 UTC*
 
 
 
@@ -19,12 +19,6 @@
 - [fix: use keyword args for Qwen VL processor call](https://github.com/OpenAdaptAI/openadapt-ml/pull/58) (#58) — merged 
 
 - [fix: make heavy ML dependencies optional for lightweight installs](https://github.com/OpenAdaptAI/openadapt-ml/pull/57) (#57) — merged 
-
-- [fix: use ResetConfig for RLEnvironment.reset() in validation script](https://github.com/OpenAdaptAI/openadapt-ml/pull/56) (#56) — merged 
-
-- [feat: add GRPO validation infrastructure and LoRA checkpoint support](https://github.com/OpenAdaptAI/openadapt-ml/pull/55) (#55) — merged 
-
-- [docs: add LoRA-per-task design document](https://github.com/OpenAdaptAI/openadapt-ml/pull/54) (#54) — merged 
 
 
 
@@ -70,15 +64,6 @@
 - [feat: add visual similarity alignment to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/174) (#174) — merged 
 
 - [fix: add retry logic and configurable timeout for evaluation endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/173) (#173) — merged 
-
-
-
-## openadapt-capture
-
-
-- [fix: add oa-atomacos dependency for macOS window capture](https://github.com/OpenAdaptAI/openadapt-capture/pull/16) (#16) — merged 
-
-- [fix: browser capture end-to-end pipeline](https://github.com/OpenAdaptAI/openadapt-capture/pull/15) (#15) — merged 
 
 
 
