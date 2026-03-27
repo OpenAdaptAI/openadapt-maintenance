@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-26 21:08 UTC*
+> *Last updated: 2026-03-27 17:32 UTC*
 
 
 
@@ -17,8 +17,6 @@
 - [fix: include image placeholder in chat template for VLM GRPO training](https://github.com/OpenAdaptAI/openadapt-ml/pull/59) (#59) — merged 
 
 - [fix: use keyword args for Qwen VL processor call](https://github.com/OpenAdaptAI/openadapt-ml/pull/58) (#58) — merged 
-
-- [fix: make heavy ML dependencies optional for lightweight installs](https://github.com/OpenAdaptAI/openadapt-ml/pull/57) (#57) — merged 
 
 
 
@@ -64,23 +62,6 @@
 - [feat: add monotonic progress bias and pluggable alignment strategy to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/176) (#176) — merged 
 
 - [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
-
-
-
-## openadapt-wright
-
-
-- [feat: add job detail and listing pages with real-time status](https://github.com/OpenAdaptAI/openadapt-wright/pull/27) (#27) — merged 
-
-- [feat: add heartbeat + bot-side reaper for worker reliability](https://github.com/OpenAdaptAI/openadapt-wright/pull/26) (#26) — merged 
-
-- [fix: strip heavy ML/CUDA deps for lightweight worker installs](https://github.com/OpenAdaptAI/openadapt-wright/pull/25) (#25) — merged 
-
-- [fix: strip local uv path sources before installing dependencies](https://github.com/OpenAdaptAI/openadapt-wright/pull/24) (#24) — merged 
-
-- [feat: add productization plan and web UI scaffold](https://github.com/OpenAdaptAI/openadapt-wright/pull/23) (#23) — merged 
-
-- [fix: bot wakes worker after job insert](https://github.com/OpenAdaptAI/openadapt-wright/pull/22) (#22) — merged 
 
 
 
