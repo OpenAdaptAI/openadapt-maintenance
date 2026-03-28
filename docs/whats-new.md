@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 16:34 UTC*
+> *Last updated: 2026-03-28 16:43 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add callback hooks to standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-evals/pull/198) (#198) — merged 
 
 - [fix: eval infra, forced keyboard override, Outlines constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/197) (#197) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add OpenAI embedding-based alignment strategy for DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/179) (#179) — merged 
 
 - [fix: replace AutoModelForVision2Seq with AutoModelForImageTextToText for transformers 5.x](https://github.com/OpenAdaptAI/openadapt-evals/pull/178) (#178) — merged 
-
-- [fix: skip verify_apps, close_all, activate_window in lightweight mode](https://github.com/OpenAdaptAI/openadapt-evals/pull/177) (#177) — merged 
 
 
 
