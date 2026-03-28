@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 19:29 UTC*
+> *Last updated: 2026-03-28 19:54 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use Outlines Generator API for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/204) (#204) — merged 
 
 - [fix: unbounded regex quantifiers prevent Outlines DFA state explosion](https://github.com/OpenAdaptAI/openadapt-evals/pull/203) (#203) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: automate full VM lifecycle in correction flywheel script](https://github.com/OpenAdaptAI/openadapt-evals/pull/186) (#186) — merged 
 
 - [feat: add end-to-end correction flywheel demonstration script](https://github.com/OpenAdaptAI/openadapt-evals/pull/185) (#185) — merged 
-
-- [feat: improve TraceAnalyzer HTML report with embedded screenshots and failure analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/184) (#184) — merged 
 
 
 
