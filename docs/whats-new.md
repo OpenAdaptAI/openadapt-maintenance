@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 19:07 UTC*
+> *Last updated: 2026-03-28 19:19 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use outlines v1.2 get_regex_logits_processor API](https://github.com/OpenAdaptAI/openadapt-evals/pull/202) (#202) — merged 
 
 - [fix: correct Outlines API import paths for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/201) (#201) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: improve TraceAnalyzer HTML report with embedded screenshots and failure analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/184) (#184) — merged 
 
 - [feat: add checkpoint evaluation script for GRPO before/after comparison](https://github.com/OpenAdaptAI/openadapt-evals/pull/183) (#183) — merged 
-
-- [feat: add evaluate_milestones_screenshot for client-side reward computation](https://github.com/OpenAdaptAI/openadapt-evals/pull/182) (#182) — merged 
 
 
 
