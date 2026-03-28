@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 19:20 UTC*
+> *Last updated: 2026-03-28 19:28 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: unbounded regex quantifiers prevent Outlines DFA state explosion](https://github.com/OpenAdaptAI/openadapt-evals/pull/203) (#203) — merged 
 
 - [fix: use outlines v1.2 get_regex_logits_processor API](https://github.com/OpenAdaptAI/openadapt-evals/pull/202) (#202) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add end-to-end correction flywheel demonstration script](https://github.com/OpenAdaptAI/openadapt-evals/pull/185) (#185) — merged 
 
 - [feat: improve TraceAnalyzer HTML report with embedded screenshots and failure analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/184) (#184) — merged 
-
-- [feat: add checkpoint evaluation script for GRPO before/after comparison](https://github.com/OpenAdaptAI/openadapt-evals/pull/183) (#183) — merged 
 
 
 
