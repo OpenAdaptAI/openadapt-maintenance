@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 20:07 UTC*
+> *Last updated: 2026-03-28 20:17 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: orphaned outputs reference + clean up tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/206) (#206) — merged 
 
 - [fix: correct Outlines multimodal input format (list not dict)](https://github.com/OpenAdaptAI/openadapt-evals/pull/205) (#205) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add systematic model comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/188) (#188) — merged 
 
 - [fix: address flywheel regression bugs (VM reset, demo validation, alignment)](https://github.com/OpenAdaptAI/openadapt-evals/pull/187) (#187) — merged 
-
-- [feat: automate full VM lifecycle in correction flywheel script](https://github.com/OpenAdaptAI/openadapt-evals/pull/186) (#186) — merged 
 
 
 
