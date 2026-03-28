@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-27 17:33 UTC*
+> *Last updated: 2026-03-28 04:32 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: demo guidance plan overview, anti-loop recovery, GRPO trainer fixes](https://github.com/OpenAdaptAI/openadapt-evals/pull/196) (#196) — merged 
 
 - [feat: add desktop cleanup, manual demo tools, and fix trainer OOM bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/195) (#195) — merged 
 
@@ -60,8 +62,6 @@
 - [fix: skip verify_apps, close_all, activate_window in lightweight mode](https://github.com/OpenAdaptAI/openadapt-evals/pull/177) (#177) — merged 
 
 - [feat: add monotonic progress bias and pluggable alignment strategy to DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/176) (#176) — merged 
-
-- [feat: add console_scripts entry points for training, eval, and analysis](https://github.com/OpenAdaptAI/openadapt-evals/pull/175) (#175) — merged 
 
 
 
