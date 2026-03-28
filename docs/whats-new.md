@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 19:55 UTC*
+> *Last updated: 2026-03-28 20:06 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: correct Outlines multimodal input format (list not dict)](https://github.com/OpenAdaptAI/openadapt-evals/pull/205) (#205) — merged 
 
 - [fix: use Outlines Generator API for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/204) (#204) — merged 
 
@@ -60,8 +62,6 @@
 - [fix: address flywheel regression bugs (VM reset, demo validation, alignment)](https://github.com/OpenAdaptAI/openadapt-evals/pull/187) (#187) — merged 
 
 - [feat: automate full VM lifecycle in correction flywheel script](https://github.com/OpenAdaptAI/openadapt-evals/pull/186) (#186) — merged 
-
-- [feat: add end-to-end correction flywheel demonstration script](https://github.com/OpenAdaptAI/openadapt-evals/pull/185) (#185) — merged 
 
 
 
