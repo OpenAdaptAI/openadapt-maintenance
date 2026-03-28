@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 20:22 UTC*
+> *Last updated: 2026-03-28 20:32 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [feat: DemoExecutor — tiered demo execution for correction flywheel](https://github.com/OpenAdaptAI/openadapt-evals/pull/208) (#208) — merged 
 
 - [fix: override planner DONE hallucination on step 0](https://github.com/OpenAdaptAI/openadapt-evals/pull/207) (#207) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add SGLang local model serving to comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/190) (#190) — merged 
 
 - [feat: add GPU instance lifecycle CLI for model serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/189) (#189) — merged 
-
-- [feat: add systematic model comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/188) (#188) — merged 
 
 
 
