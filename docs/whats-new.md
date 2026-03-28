@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 22:54 UTC*
+> *Last updated: 2026-03-28 23:01 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: WAAConnection reads WAA_HOST/WAA_KEY from .env](https://github.com/OpenAdaptAI/openadapt-evals/pull/215) (#215) — merged 
 
 - [fix: align WAAConnection API with client usage](https://github.com/OpenAdaptAI/openadapt-evals/pull/214) (#214) — merged 
 
@@ -60,8 +62,6 @@
 - [fix: eval infra, forced keyboard override, Outlines constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/197) (#197) — merged 
 
 - [fix: demo guidance plan overview, anti-loop recovery, GRPO trainer fixes](https://github.com/OpenAdaptAI/openadapt-evals/pull/196) (#196) — merged 
-
-- [feat: add desktop cleanup, manual demo tools, and fix trainer OOM bugs](https://github.com/OpenAdaptAI/openadapt-evals/pull/195) (#195) — merged 
 
 
 
