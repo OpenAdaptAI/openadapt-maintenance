@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 20:33 UTC*
+> *Last updated: 2026-03-28 21:19 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [feat: document DemoExecutor + standalone trainer, add telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/209) (#209) — merged 
 
 - [feat: DemoExecutor — tiered demo execution for correction flywheel](https://github.com/OpenAdaptAI/openadapt-evals/pull/208) (#208) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add standalone GRPO trainer with WAADirect (no openadapt-ml dependency)](https://github.com/OpenAdaptAI/openadapt-evals/pull/191) (#191) — merged 
 
 - [feat: add SGLang local model serving to comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/190) (#190) — merged 
-
-- [feat: add GPU instance lifecycle CLI for model serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/189) (#189) — merged 
 
 
 
