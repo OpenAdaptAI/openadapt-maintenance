@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 21:38 UTC*
+> *Last updated: 2026-03-28 22:32 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [feat: WAAConnection, W&B callbacks, Chrome setup, UI-Venus serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/212) (#212) — merged 
 
 - [feat: DemoExecutor HTTP grounder + telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/211) (#211) — merged 
 
@@ -60,8 +62,6 @@
 - [fix: switch distillation collection to WAADirect for reliable task setup](https://github.com/OpenAdaptAI/openadapt-evals/pull/194) (#194) — merged 
 
 - [fix: align standalone GRPO with WAA API format and add retry logic](https://github.com/OpenAdaptAI/openadapt-evals/pull/193) (#193) — merged 
-
-- [feat: add comprehensive API and infrastructure cost tracking](https://github.com/OpenAdaptAI/openadapt-evals/pull/192) (#192) — merged 
 
 
 
