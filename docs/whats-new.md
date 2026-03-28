@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 16:45 UTC*
+> *Last updated: 2026-03-28 18:46 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: constrained decoding cache bug and task rotation](https://github.com/OpenAdaptAI/openadapt-evals/pull/199) (#199) — merged 
 
 - [feat: add callback hooks to standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-evals/pull/198) (#198) — merged 
 
@@ -60,8 +62,6 @@
 - [fix: add vm_ip to MockEnv in evaluate_server.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/181) (#181) — merged 
 
 - [feat: add OpenAI embedding-based alignment strategy for DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/179) (#179) — merged 
-
-- [fix: replace AutoModelForVision2Seq with AutoModelForImageTextToText for transformers 5.x](https://github.com/OpenAdaptAI/openadapt-evals/pull/178) (#178) — merged 
 
 
 
