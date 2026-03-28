@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 21:20 UTC*
+> *Last updated: 2026-03-28 21:28 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: update enrichment tests for new instruction format](https://github.com/OpenAdaptAI/openadapt-evals/pull/210) (#210) — merged 
 
 - [feat: document DemoExecutor + standalone trainer, add telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/209) (#209) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add comprehensive API and infrastructure cost tracking](https://github.com/OpenAdaptAI/openadapt-evals/pull/192) (#192) — merged 
 
 - [feat: add standalone GRPO trainer with WAADirect (no openadapt-ml dependency)](https://github.com/OpenAdaptAI/openadapt-evals/pull/191) (#191) — merged 
-
-- [feat: add SGLang local model serving to comparison framework](https://github.com/OpenAdaptAI/openadapt-evals/pull/190) (#190) — merged 
 
 
 
