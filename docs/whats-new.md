@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 18:47 UTC*
+> *Last updated: 2026-03-28 18:51 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: constrained decoding preserves chain-of-thought reasoning](https://github.com/OpenAdaptAI/openadapt-evals/pull/200) (#200) — merged 
 
 - [fix: constrained decoding cache bug and task rotation](https://github.com/OpenAdaptAI/openadapt-evals/pull/199) (#199) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add evaluate_milestones_screenshot for client-side reward computation](https://github.com/OpenAdaptAI/openadapt-evals/pull/182) (#182) — merged 
 
 - [fix: add vm_ip to MockEnv in evaluate_server.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/181) (#181) — merged 
-
-- [feat: add OpenAI embedding-based alignment strategy for DemoLibrary](https://github.com/OpenAdaptAI/openadapt-evals/pull/179) (#179) — merged 
 
 
 
