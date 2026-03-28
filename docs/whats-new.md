@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 18:52 UTC*
+> *Last updated: 2026-03-28 19:06 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 ## openadapt-evals
 
+
+- [fix: correct Outlines API import paths for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/201) (#201) — merged 
 
 - [fix: constrained decoding preserves chain-of-thought reasoning](https://github.com/OpenAdaptAI/openadapt-evals/pull/200) (#200) — merged 
 
@@ -60,8 +62,6 @@
 - [feat: add checkpoint evaluation script for GRPO before/after comparison](https://github.com/OpenAdaptAI/openadapt-evals/pull/183) (#183) — merged 
 
 - [feat: add evaluate_milestones_screenshot for client-side reward computation](https://github.com/OpenAdaptAI/openadapt-evals/pull/182) (#182) — merged 
-
-- [fix: add vm_ip to MockEnv in evaluate_server.py](https://github.com/OpenAdaptAI/openadapt-evals/pull/181) (#181) — merged 
 
 
 
