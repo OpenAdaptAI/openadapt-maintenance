@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 13:55 UTC*
+> *Last updated: 2026-03-29 14:02 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: proper vision-safe loss (process full text as one unit)](https://github.com/OpenAdaptAI/openadapt-evals/pull/224) (#224) — merged 
 
 - [fix: vision loss forward pass falls back to exclude on crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/223) (#223) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: orphaned outputs reference + clean up tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/206) (#206) — merged 
 
 - [fix: correct Outlines multimodal input format (list not dict)](https://github.com/OpenAdaptAI/openadapt-evals/pull/205) (#205) — merged 
-
-- [fix: use Outlines Generator API for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/204) (#204) — merged 
 
 
 
