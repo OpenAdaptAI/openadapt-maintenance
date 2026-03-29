@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 16:31 UTC*
+> *Last updated: 2026-03-29 16:36 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: add TRL + Unsloth to [training] extra](https://github.com/OpenAdaptAI/openadapt-evals/pull/234) (#234) — merged 
 
 - [docs: pyproject.toml telemetry disable for enterprises](https://github.com/OpenAdaptAI/openadapt-evals/pull/233) (#233) — merged 
 
@@ -58,8 +60,6 @@
 - [docs: correction flywheel validation report (0.00 → 1.00)](https://github.com/OpenAdaptAI/openadapt-evals/pull/216) (#216) — merged 
 
 - [fix: WAAConnection reads WAA_HOST/WAA_KEY from .env](https://github.com/OpenAdaptAI/openadapt-evals/pull/215) (#215) — merged 
-
-- [fix: align WAAConnection API with client usage](https://github.com/OpenAdaptAI/openadapt-evals/pull/214) (#214) — merged 
 
 
 
