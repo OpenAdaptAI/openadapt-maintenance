@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 14:19 UTC*
+> *Last updated: 2026-03-29 14:30 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [test: synthetic vision-merge model proves fix correctness](https://github.com/OpenAdaptAI/openadapt-evals/pull/226) (#226) — merged 
 
 - [test: vision loss tests (8 tests)](https://github.com/OpenAdaptAI/openadapt-evals/pull/225) (#225) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: DemoExecutor — tiered demo execution for correction flywheel](https://github.com/OpenAdaptAI/openadapt-evals/pull/208) (#208) — merged 
 
 - [fix: override planner DONE hallucination on step 0](https://github.com/OpenAdaptAI/openadapt-evals/pull/207) (#207) — merged 
-
-- [fix: orphaned outputs reference + clean up tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/206) (#206) — merged 
 
 
 
