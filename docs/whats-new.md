@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 20:42 UTC*
+> *Last updated: 2026-03-29 20:43 UTC*
 
 
 
@@ -26,6 +26,10 @@
 - [fix: try local eval before slow /evaluate endpoint in evaluate_dense](https://github.com/OpenAdaptAI/openadapt-evals/pull/245) (#245) — merged 
 
 - [fix: batch_size must be multiple of num_generations, pad dataset](https://github.com/OpenAdaptAI/openadapt-evals/pull/244) (#244) — merged 
+
+- [fix: add truncation warning to TRL generate paths](https://github.com/OpenAdaptAI/openadapt-evals/pull/242) (#242) — merged 
+
+- [test: add 10 TRL parity tests for deprecation readiness](https://github.com/OpenAdaptAI/openadapt-evals/pull/241) (#241) — merged 
 
 - [fix: set per_device_train_batch_size to match dataset size](https://github.com/OpenAdaptAI/openadapt-evals/pull/240) (#240) — merged 
 
@@ -56,10 +60,6 @@
 - [test: synthetic vision-merge model proves fix correctness](https://github.com/OpenAdaptAI/openadapt-evals/pull/226) (#226) — merged 
 
 - [test: vision loss tests (8 tests)](https://github.com/OpenAdaptAI/openadapt-evals/pull/225) (#225) — merged 
-
-- [fix: proper vision-safe loss (process full text as one unit)](https://github.com/OpenAdaptAI/openadapt-evals/pull/224) (#224) — merged 
-
-- [fix: vision loss forward pass falls back to exclude on crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/223) (#223) — merged 
 
 
 
