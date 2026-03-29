@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 20:16 UTC*
+> *Last updated: 2026-03-29 20:42 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use training-appropriate evaluate timeouts instead of reordering eval](https://github.com/OpenAdaptAI/openadapt-evals/pull/246) (#246) — merged 
 
 - [fix: try local eval before slow /evaluate endpoint in evaluate_dense](https://github.com/OpenAdaptAI/openadapt-evals/pull/245) (#245) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: proper vision-safe loss (process full text as one unit)](https://github.com/OpenAdaptAI/openadapt-evals/pull/224) (#224) — merged 
 
 - [fix: vision loss forward pass falls back to exclude on crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/223) (#223) — merged 
-
-- [test: DemoExecutor e2e tests (12 tests, mock WAA)](https://github.com/OpenAdaptAI/openadapt-evals/pull/222) (#222) — merged 
 
 
 
