@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 18:15 UTC*
+> *Last updated: 2026-03-29 18:17 UTC*
 
 
 
@@ -22,6 +22,8 @@
 
 
 - [feat: add openadapt-types dependency and _AgentOutput schema](https://github.com/OpenAdaptAI/openadapt-evals/pull/239) (#239) — merged 
+
+- [feat: port standalone trainer robustness to TRL](https://github.com/OpenAdaptAI/openadapt-evals/pull/238) (#238) — merged 
 
 - [fix: critical TRL trainer bugs — wrong prompt, ignored task_ids, DSL parsing](https://github.com/OpenAdaptAI/openadapt-evals/pull/236) (#236) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: add PyYAML to core deps (broken by Phase 0b)](https://github.com/OpenAdaptAI/openadapt-evals/pull/220) (#220) — merged 
 
 - [chore: Phase 0a dead code cleanup + corrupt screenshot fix](https://github.com/OpenAdaptAI/openadapt-evals/pull/219) (#219) — merged 
-
-- [feat: make openadapt-ml optional dependency (Phase 0b)](https://github.com/OpenAdaptAI/openadapt-evals/pull/218) (#218) — merged 
 
 
 
