@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 05:01 UTC*
+> *Last updated: 2026-03-29 05:02 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [test: DemoExecutor e2e tests (12 tests, mock WAA)](https://github.com/OpenAdaptAI/openadapt-evals/pull/222) (#222) — merged 
 
 - [fix: add numpy to dev deps for CI](https://github.com/OpenAdaptAI/openadapt-evals/pull/221) (#221) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: use Outlines Generator API for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/204) (#204) — merged 
 
 - [fix: unbounded regex quantifiers prevent Outlines DFA state explosion](https://github.com/OpenAdaptAI/openadapt-evals/pull/203) (#203) — merged 
-
-- [fix: use outlines v1.2 get_regex_logits_processor API](https://github.com/OpenAdaptAI/openadapt-evals/pull/202) (#202) — merged 
 
 
 
