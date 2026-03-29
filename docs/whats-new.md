@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 21:24 UTC*
+> *Last updated: 2026-03-29 21:40 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: comprehensive prompt diagnostics for debugging garbage output](https://github.com/OpenAdaptAI/openadapt-evals/pull/248) (#248) — merged 
 
 - [fix: use build_agent_messages for TRL prompt + fix 4x over-generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/247) (#247) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: TRL GRPOTrainer migration with drop-in wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/229) (#229) — merged 
 
 - [feat: Weave integration for LLM/agent tracing](https://github.com/OpenAdaptAI/openadapt-evals/pull/228) (#228) — merged 
-
-- [fix: loss diagnostic logging + training step test](https://github.com/OpenAdaptAI/openadapt-evals/pull/227) (#227) — merged 
 
 
 
