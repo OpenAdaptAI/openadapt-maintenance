@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 16:38 UTC*
+> *Last updated: 2026-03-29 17:05 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add triple-layer CI protection against heavy import failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/235) (#235) — merged 
 
 - [feat: add TRL + Unsloth to [training] extra](https://github.com/OpenAdaptAI/openadapt-evals/pull/234) (#234) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: vision_loss_mode checkpoint/include attention mask mismatch on Qwen3](https://github.com/OpenAdaptAI/openadapt-evals/pull/217) (#217) — merged 
 
 - [docs: correction flywheel validation report (0.00 → 1.00)](https://github.com/OpenAdaptAI/openadapt-evals/pull/216) (#216) — merged 
-
-- [fix: WAAConnection reads WAA_HOST/WAA_KEY from .env](https://github.com/OpenAdaptAI/openadapt-evals/pull/215) (#215) — merged 
 
 
 
