@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 04:32 UTC*
+> *Last updated: 2026-03-29 04:45 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [chore: Phase 0a dead code cleanup + corrupt screenshot fix](https://github.com/OpenAdaptAI/openadapt-evals/pull/219) (#219) — merged 
 
 - [feat: make openadapt-ml optional dependency (Phase 0b)](https://github.com/OpenAdaptAI/openadapt-evals/pull/218) (#218) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: correct Outlines API import paths for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/201) (#201) — merged 
 
 - [fix: constrained decoding preserves chain-of-thought reasoning](https://github.com/OpenAdaptAI/openadapt-evals/pull/200) (#200) — merged 
-
-- [fix: constrained decoding cache bug and task rotation](https://github.com/OpenAdaptAI/openadapt-evals/pull/199) (#199) — merged 
 
 
 
