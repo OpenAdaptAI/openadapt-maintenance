@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 15:50 UTC*
+> *Last updated: 2026-03-29 15:57 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: TRL GRPOTrainer migration with drop-in wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/229) (#229) — merged 
 
 - [feat: Weave integration for LLM/agent tracing](https://github.com/OpenAdaptAI/openadapt-evals/pull/228) (#228) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: DemoExecutor HTTP grounder + telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/211) (#211) — merged 
 
 - [fix: update enrichment tests for new instruction format](https://github.com/OpenAdaptAI/openadapt-evals/pull/210) (#210) — merged 
-
-- [feat: document DemoExecutor + standalone trainer, add telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/209) (#209) — merged 
 
 
 
