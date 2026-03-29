@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 18:17 UTC*
+> *Last updated: 2026-03-29 18:21 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: set per_device_train_batch_size to match dataset size](https://github.com/OpenAdaptAI/openadapt-evals/pull/240) (#240) — merged 
 
 - [feat: add openadapt-types dependency and _AgentOutput schema](https://github.com/OpenAdaptAI/openadapt-evals/pull/239) (#239) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: add numpy to dev deps for CI](https://github.com/OpenAdaptAI/openadapt-evals/pull/221) (#221) — merged 
 
 - [fix: add PyYAML to core deps (broken by Phase 0b)](https://github.com/OpenAdaptAI/openadapt-evals/pull/220) (#220) — merged 
-
-- [chore: Phase 0a dead code cleanup + corrupt screenshot fix](https://github.com/OpenAdaptAI/openadapt-evals/pull/219) (#219) — merged 
 
 
 
