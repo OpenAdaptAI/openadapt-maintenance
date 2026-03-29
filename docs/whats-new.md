@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 16:14 UTC*
+> *Last updated: 2026-03-29 16:18 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [docs: telemetry guide (disable with DO_NOT_TRACK=1)](https://github.com/OpenAdaptAI/openadapt-evals/pull/232) (#232) — merged 
 
 - [fix: TelemetryCallback import crash + 12 TRL tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/231) (#231) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: align WAAConnection API with client usage](https://github.com/OpenAdaptAI/openadapt-evals/pull/214) (#214) — merged 
 
 - [feat: trainer telemetry, UI-Venus consistency, --grounder-endpoint](https://github.com/OpenAdaptAI/openadapt-evals/pull/213) (#213) — merged 
-
-- [feat: WAAConnection, W&B callbacks, Chrome setup, UI-Venus serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/212) (#212) — merged 
 
 
 
