@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 04:45 UTC*
+> *Last updated: 2026-03-29 04:52 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: add PyYAML to core deps (broken by Phase 0b)](https://github.com/OpenAdaptAI/openadapt-evals/pull/220) (#220) — merged 
 
 - [chore: Phase 0a dead code cleanup + corrupt screenshot fix](https://github.com/OpenAdaptAI/openadapt-evals/pull/219) (#219) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: use outlines v1.2 get_regex_logits_processor API](https://github.com/OpenAdaptAI/openadapt-evals/pull/202) (#202) — merged 
 
 - [fix: correct Outlines API import paths for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/201) (#201) — merged 
-
-- [fix: constrained decoding preserves chain-of-thought reasoning](https://github.com/OpenAdaptAI/openadapt-evals/pull/200) (#200) — merged 
 
 
 
