@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 14:30 UTC*
+> *Last updated: 2026-03-29 14:38 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: loss diagnostic logging + training step test](https://github.com/OpenAdaptAI/openadapt-evals/pull/227) (#227) — merged 
 
 - [test: synthetic vision-merge model proves fix correctness](https://github.com/OpenAdaptAI/openadapt-evals/pull/226) (#226) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: document DemoExecutor + standalone trainer, add telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/209) (#209) — merged 
 
 - [feat: DemoExecutor — tiered demo execution for correction flywheel](https://github.com/OpenAdaptAI/openadapt-evals/pull/208) (#208) — merged 
-
-- [fix: override planner DONE hallucination on step 0](https://github.com/OpenAdaptAI/openadapt-evals/pull/207) (#207) — merged 
 
 
 
