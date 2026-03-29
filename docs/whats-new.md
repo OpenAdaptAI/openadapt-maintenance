@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 15:58 UTC*
+> *Last updated: 2026-03-29 16:07 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: clean config separation (our config + TRL config)](https://github.com/OpenAdaptAI/openadapt-evals/pull/230) (#230) — merged 
 
 - [feat: TRL GRPOTrainer migration with drop-in wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/229) (#229) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: WAAConnection, W&B callbacks, Chrome setup, UI-Venus serving](https://github.com/OpenAdaptAI/openadapt-evals/pull/212) (#212) — merged 
 
 - [feat: DemoExecutor HTTP grounder + telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/211) (#211) — merged 
-
-- [fix: update enrichment tests for new instruction format](https://github.com/OpenAdaptAI/openadapt-evals/pull/210) (#210) — merged 
 
 
 
