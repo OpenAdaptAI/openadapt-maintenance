@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 05:29 UTC*
+> *Last updated: 2026-03-29 13:54 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: vision loss forward pass falls back to exclude on crash](https://github.com/OpenAdaptAI/openadapt-evals/pull/223) (#223) — merged 
 
 - [test: DemoExecutor e2e tests (12 tests, mock WAA)](https://github.com/OpenAdaptAI/openadapt-evals/pull/222) (#222) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: correct Outlines multimodal input format (list not dict)](https://github.com/OpenAdaptAI/openadapt-evals/pull/205) (#205) — merged 
 
 - [fix: use Outlines Generator API for constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/204) (#204) — merged 
-
-- [fix: unbounded regex quantifiers prevent Outlines DFA state explosion](https://github.com/OpenAdaptAI/openadapt-evals/pull/203) (#203) — merged 
 
 
 
