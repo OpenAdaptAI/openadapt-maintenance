@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 23:38 UTC*
+> *Last updated: 2026-03-29 23:47 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: also patch model.generate() to inject cached pixel_values](https://github.com/OpenAdaptAI/openadapt-evals/pull/254) (#254) — merged 
 
 - [fix: patch model.forward() directly — survives TRL unwrapping](https://github.com/OpenAdaptAI/openadapt-evals/pull/253) (#253) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: add triple-layer CI protection against heavy import failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/235) (#235) — merged 
 
 - [feat: add TRL + Unsloth to [training] extra](https://github.com/OpenAdaptAI/openadapt-evals/pull/234) (#234) — merged 
-
-- [docs: pyproject.toml telemetry disable for enterprises](https://github.com/OpenAdaptAI/openadapt-evals/pull/233) (#233) — merged 
 
 
 
