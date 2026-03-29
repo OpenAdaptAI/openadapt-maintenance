@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 20:47 UTC*
+> *Last updated: 2026-03-29 21:23 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: use build_agent_messages for TRL prompt + fix 4x over-generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/247) (#247) — merged 
 
 - [fix: use training-appropriate evaluate timeouts instead of reordering eval](https://github.com/OpenAdaptAI/openadapt-evals/pull/246) (#246) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: Weave integration for LLM/agent tracing](https://github.com/OpenAdaptAI/openadapt-evals/pull/228) (#228) — merged 
 
 - [fix: loss diagnostic logging + training step test](https://github.com/OpenAdaptAI/openadapt-evals/pull/227) (#227) — merged 
-
-- [test: synthetic vision-merge model proves fix correctness](https://github.com/OpenAdaptAI/openadapt-evals/pull/226) (#226) — merged 
 
 
 
