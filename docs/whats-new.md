@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 04:13 UTC*
+> *Last updated: 2026-03-29 04:15 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: vision_loss_mode checkpoint/include attention mask mismatch on Qwen3](https://github.com/OpenAdaptAI/openadapt-evals/pull/217) (#217) — merged 
 
 - [docs: correction flywheel validation report (0.00 → 1.00)](https://github.com/OpenAdaptAI/openadapt-evals/pull/216) (#216) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: constrained decoding cache bug and task rotation](https://github.com/OpenAdaptAI/openadapt-evals/pull/199) (#199) — merged 
 
 - [feat: add callback hooks to standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-evals/pull/198) (#198) — merged 
-
-- [fix: eval infra, forced keyboard override, Outlines constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/197) (#197) — merged 
 
 
 
