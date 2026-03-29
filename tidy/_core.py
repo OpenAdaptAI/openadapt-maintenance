@@ -1077,6 +1077,14 @@ def cmd_scan_org(args) -> None:
         blob_matches = scan_file_contents(patterns, cwd=repo_path)
         history_matches = scan_file_history(patterns, cwd=repo_path)
 
+        n_hits = len(commit_matches) + len(blob_matches) + len(history_matches)
+
+        if not output_json:
+            # Always print repo header so output is unambiguous
+            print(f"\n{'='*60}")
+            print(f"  {name}  {'(' + str(n_hits) + ' matches)' if n_hits else '(clean)'}")
+            print(f"{'='*60}")
+
         if commit_matches or blob_matches or history_matches:
             affected_repos.append(name)
             total_commit_hits += len(commit_matches)
@@ -1102,10 +1110,6 @@ def cmd_scan_org(args) -> None:
                     ],
                 }
             else:
-                print(f"\n{'='*60}")
-                print(f"  {name}")
-                print(f"{'='*60}")
-
                 if commit_matches:
                     seen_shas: set[str] = set()
                     for m in commit_matches:
