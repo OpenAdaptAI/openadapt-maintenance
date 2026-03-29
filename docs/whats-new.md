@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 22:07 UTC*
+> *Last updated: 2026-03-29 22:29 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: patch chat_template to remove think tags at the source](https://github.com/OpenAdaptAI/openadapt-evals/pull/250) (#250) — merged 
 
 - [fix: disable Qwen3.5 thinking mode in TRL generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/249) (#249) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: TelemetryCallback import crash + 12 TRL tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/231) (#231) — merged 
 
 - [fix: clean config separation (our config + TRL config)](https://github.com/OpenAdaptAI/openadapt-evals/pull/230) (#230) — merged 
-
-- [feat: TRL GRPOTrainer migration with drop-in wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/229) (#229) — merged 
 
 
 
