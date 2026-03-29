@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 21:41 UTC*
+> *Last updated: 2026-03-29 22:06 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: disable Qwen3.5 thinking mode in TRL generation](https://github.com/OpenAdaptAI/openadapt-evals/pull/249) (#249) — merged 
 
 - [fix: comprehensive prompt diagnostics for debugging garbage output](https://github.com/OpenAdaptAI/openadapt-evals/pull/248) (#248) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: clean config separation (our config + TRL config)](https://github.com/OpenAdaptAI/openadapt-evals/pull/230) (#230) — merged 
 
 - [feat: TRL GRPOTrainer migration with drop-in wrapper](https://github.com/OpenAdaptAI/openadapt-evals/pull/229) (#229) — merged 
-
-- [feat: Weave integration for LLM/agent tracing](https://github.com/OpenAdaptAI/openadapt-evals/pull/228) (#228) — merged 
 
 
 
