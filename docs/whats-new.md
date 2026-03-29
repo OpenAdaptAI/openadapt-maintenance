@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 22:30 UTC*
+> *Last updated: 2026-03-29 23:04 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: VLMModelWrapper — multimodal compatibility layer for TRL](https://github.com/OpenAdaptAI/openadapt-evals/pull/251) (#251) — merged 
 
 - [fix: patch chat_template to remove think tags at the source](https://github.com/OpenAdaptAI/openadapt-evals/pull/250) (#250) — merged 
 
@@ -58,8 +60,6 @@
 - [docs: telemetry guide (disable with DO_NOT_TRACK=1)](https://github.com/OpenAdaptAI/openadapt-evals/pull/232) (#232) — merged 
 
 - [fix: TelemetryCallback import crash + 12 TRL tests](https://github.com/OpenAdaptAI/openadapt-evals/pull/231) (#231) — merged 
-
-- [fix: clean config separation (our config + TRL config)](https://github.com/OpenAdaptAI/openadapt-evals/pull/230) (#230) — merged 
 
 
 
