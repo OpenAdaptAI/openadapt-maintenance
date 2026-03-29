@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 20:44 UTC*
+> *Last updated: 2026-03-29 20:46 UTC*
 
 
 
@@ -26,6 +26,8 @@
 - [fix: try local eval before slow /evaluate endpoint in evaluate_dense](https://github.com/OpenAdaptAI/openadapt-evals/pull/245) (#245) — merged 
 
 - [fix: batch_size must be multiple of num_generations, pad dataset](https://github.com/OpenAdaptAI/openadapt-evals/pull/244) (#244) — merged 
+
+- [fix: wire on_before_collect and on_rollout_complete callbacks through rollout_func](https://github.com/OpenAdaptAI/openadapt-evals/pull/243) (#243) — merged 
 
 - [fix: add truncation warning to TRL generate paths](https://github.com/OpenAdaptAI/openadapt-evals/pull/242) (#242) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: loss diagnostic logging + training step test](https://github.com/OpenAdaptAI/openadapt-evals/pull/227) (#227) — merged 
 
 - [test: synthetic vision-merge model proves fix correctness](https://github.com/OpenAdaptAI/openadapt-evals/pull/226) (#226) — merged 
-
-- [test: vision loss tests (8 tests)](https://github.com/OpenAdaptAI/openadapt-evals/pull/225) (#225) — merged 
 
 
 
