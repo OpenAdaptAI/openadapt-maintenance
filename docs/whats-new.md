@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-28 23:03 UTC*
+> *Last updated: 2026-03-29 04:13 UTC*
 
 
 
@@ -16,12 +16,12 @@
 
 - [fix: include image placeholder in chat template for VLM GRPO training](https://github.com/OpenAdaptAI/openadapt-ml/pull/59) (#59) — merged 
 
-- [fix: use keyword args for Qwen VL processor call](https://github.com/OpenAdaptAI/openadapt-ml/pull/58) (#58) — merged 
-
 
 
 ## openadapt-evals
 
+
+- [docs: correction flywheel validation report (0.00 → 1.00)](https://github.com/OpenAdaptAI/openadapt-evals/pull/216) (#216) — merged 
 
 - [fix: WAAConnection reads WAA_HOST/WAA_KEY from .env](https://github.com/OpenAdaptAI/openadapt-evals/pull/215) (#215) — merged 
 
@@ -60,8 +60,6 @@
 - [feat: add callback hooks to standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-evals/pull/198) (#198) — merged 
 
 - [fix: eval infra, forced keyboard override, Outlines constrained decoding](https://github.com/OpenAdaptAI/openadapt-evals/pull/197) (#197) — merged 
-
-- [fix: demo guidance plan overview, anti-loop recovery, GRPO trainer fixes](https://github.com/OpenAdaptAI/openadapt-evals/pull/196) (#196) — merged 
 
 
 
