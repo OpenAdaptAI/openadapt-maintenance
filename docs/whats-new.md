@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 23:26 UTC*
+> *Last updated: 2026-03-29 23:37 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [fix: patch model.forward() directly — survives TRL unwrapping](https://github.com/OpenAdaptAI/openadapt-evals/pull/253) (#253) — merged 
 
 - [fix: VLMModelWrapper PEFT isinstance compatibility for TRL validation](https://github.com/OpenAdaptAI/openadapt-evals/pull/252) (#252) — merged 
 
@@ -58,8 +60,6 @@
 - [feat: add TRL + Unsloth to [training] extra](https://github.com/OpenAdaptAI/openadapt-evals/pull/234) (#234) — merged 
 
 - [docs: pyproject.toml telemetry disable for enterprises](https://github.com/OpenAdaptAI/openadapt-evals/pull/233) (#233) — merged 
-
-- [docs: telemetry guide (disable with DO_NOT_TRACK=1)](https://github.com/OpenAdaptAI/openadapt-evals/pull/232) (#232) — merged 
 
 
 
