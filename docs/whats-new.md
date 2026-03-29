@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 14:39 UTC*
+> *Last updated: 2026-03-29 15:15 UTC*
 
 
 
@@ -20,6 +20,8 @@
 
 ## openadapt-evals
 
+
+- [feat: Weave integration for LLM/agent tracing](https://github.com/OpenAdaptAI/openadapt-evals/pull/228) (#228) — merged 
 
 - [fix: loss diagnostic logging + training step test](https://github.com/OpenAdaptAI/openadapt-evals/pull/227) (#227) — merged 
 
@@ -58,8 +60,6 @@
 - [fix: update enrichment tests for new instruction format](https://github.com/OpenAdaptAI/openadapt-evals/pull/210) (#210) — merged 
 
 - [feat: document DemoExecutor + standalone trainer, add telemetry events](https://github.com/OpenAdaptAI/openadapt-evals/pull/209) (#209) — merged 
-
-- [feat: DemoExecutor — tiered demo execution for correction flywheel](https://github.com/OpenAdaptAI/openadapt-evals/pull/208) (#208) — merged 
 
 
 
