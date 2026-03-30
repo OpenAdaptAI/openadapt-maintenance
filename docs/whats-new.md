@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-29 23:48 UTC*
+> *Last updated: 2026-03-30 10:21 UTC*
 
 
 
@@ -9,12 +9,6 @@
 
 
 - [fix: increase max_new_tokens to 2048 and make configurable via GRPOConfig](https://github.com/OpenAdaptAI/openadapt-ml/pull/62) (#62) — merged 
-
-- [fix: align GRPO prompt format with SFT training format](https://github.com/OpenAdaptAI/openadapt-ml/pull/61) (#61) — merged 
-
-- [feat: add --task-dir support for milestone-based rewards in standalone GRPO trainer](https://github.com/OpenAdaptAI/openadapt-ml/pull/60) (#60) — merged 
-
-- [fix: include image placeholder in chat template for VLM GRPO training](https://github.com/OpenAdaptAI/openadapt-ml/pull/59) (#59) — merged 
 
 
 
