@@ -1,7 +1,7 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-30 10:21 UTC*
+> *Last updated: 2026-03-30 16:57 UTC*
 
 
 
@@ -14,6 +14,8 @@
 
 ## openadapt-evals
 
+
+- [fix: configurable max_grad_norm, lower default lr, remove premature deprecation](https://github.com/OpenAdaptAI/openadapt-evals/pull/255) (#255) — merged 
 
 - [fix: also patch model.generate() to inject cached pixel_values](https://github.com/OpenAdaptAI/openadapt-evals/pull/254) (#254) — merged 
 
@@ -52,8 +54,6 @@
 - [fix: critical TRL trainer bugs — wrong prompt, ignored task_ids, DSL parsing](https://github.com/OpenAdaptAI/openadapt-evals/pull/236) (#236) — merged 
 
 - [fix: add triple-layer CI protection against heavy import failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/235) (#235) — merged 
-
-- [feat: add TRL + Unsloth to [training] extra](https://github.com/OpenAdaptAI/openadapt-evals/pull/234) (#234) — merged 
 
 
 
