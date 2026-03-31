@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-31 22:39 UTC*
+> *Last updated: 2026-03-31 22:46 UTC*
 
 
 
 ## openadapt-evals
 
+
+- [feat: OCR text anchoring (Tier 1.5a) for grounding cascade](https://github.com/OpenAdaptAI/openadapt-evals/pull/259) (#259) — merged 
 
 - [feat: state narrowing and transition verification for grounding cascade](https://github.com/OpenAdaptAI/openadapt-evals/pull/257) (#257) — merged 
 
@@ -45,8 +47,6 @@
 - [fix: set per_device_train_batch_size to match dataset size](https://github.com/OpenAdaptAI/openadapt-evals/pull/240) (#240) — merged 
 
 - [feat: add openadapt-types dependency and _AgentOutput schema](https://github.com/OpenAdaptAI/openadapt-evals/pull/239) (#239) — merged 
-
-- [feat: port standalone trainer robustness to TRL](https://github.com/OpenAdaptAI/openadapt-evals/pull/238) (#238) — merged 
 
 
 
