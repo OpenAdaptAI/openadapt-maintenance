@@ -1,19 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-30 16:58 UTC*
-
-
-
-## openadapt-ml
-
-
-- [fix: increase max_new_tokens to 2048 and make configurable via GRPOConfig](https://github.com/OpenAdaptAI/openadapt-ml/pull/62) (#62) — merged 
+> *Last updated: 2026-03-31 22:14 UTC*
 
 
 
 ## openadapt-evals
 
+
+- [feat: GroundingTarget + GroundingCandidate data model for cascade architecture](https://github.com/OpenAdaptAI/openadapt-evals/pull/256) (#256) — merged 
 
 - [fix: configurable max_grad_norm, lower default lr, remove premature deprecation](https://github.com/OpenAdaptAI/openadapt-evals/pull/255) (#255) — merged 
 
@@ -52,8 +47,6 @@
 - [feat: port standalone trainer robustness to TRL](https://github.com/OpenAdaptAI/openadapt-evals/pull/238) (#238) — merged 
 
 - [fix: critical TRL trainer bugs — wrong prompt, ignored task_ids, DSL parsing](https://github.com/OpenAdaptAI/openadapt-evals/pull/236) (#236) — merged 
-
-- [fix: add triple-layer CI protection against heavy import failures](https://github.com/OpenAdaptAI/openadapt-evals/pull/235) (#235) — merged 
 
 
 
