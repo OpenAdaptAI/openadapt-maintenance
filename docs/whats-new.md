@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-31 22:16 UTC*
+> *Last updated: 2026-03-31 22:38 UTC*
 
 
 
 ## openadapt-evals
 
+
+- [feat: state narrowing and transition verification for grounding cascade](https://github.com/OpenAdaptAI/openadapt-evals/pull/257) (#257) — merged 
 
 - [feat: GroundingTarget + GroundingCandidate data model for cascade architecture](https://github.com/OpenAdaptAI/openadapt-evals/pull/256) (#256) — merged 
 
@@ -45,8 +47,6 @@
 - [feat: add openadapt-types dependency and _AgentOutput schema](https://github.com/OpenAdaptAI/openadapt-evals/pull/239) (#239) — merged 
 
 - [feat: port standalone trainer robustness to TRL](https://github.com/OpenAdaptAI/openadapt-evals/pull/238) (#238) — merged 
-
-- [fix: critical TRL trainer bugs — wrong prompt, ignored task_ids, DSL parsing](https://github.com/OpenAdaptAI/openadapt-evals/pull/236) (#236) — merged 
 
 
 
