@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-04-01 15:26 UTC*
+> *Last updated: 2026-04-01 15:28 UTC*
 
 
 
 ## openadapt-evals
 
+
+- [feat: demo enrichment pipeline for GroundingTarget data](https://github.com/OpenAdaptAI/openadapt-evals/pull/261) (#261) — merged 
 
 - [feat: add GLM-OCR as primary OCR backend, pytesseract as fallback](https://github.com/OpenAdaptAI/openadapt-evals/pull/260) (#260) — merged 
 
@@ -45,8 +47,6 @@
 - [fix: add truncation warning to TRL generate paths](https://github.com/OpenAdaptAI/openadapt-evals/pull/242) (#242) — merged 
 
 - [test: add 10 TRL parity tests for deprecation readiness](https://github.com/OpenAdaptAI/openadapt-evals/pull/241) (#241) — merged 
-
-- [fix: set per_device_train_batch_size to match dataset size](https://github.com/OpenAdaptAI/openadapt-evals/pull/240) (#240) — merged 
 
 
 
