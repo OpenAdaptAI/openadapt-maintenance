@@ -1,12 +1,14 @@
 # What's New
 
 > *Auto-generated digest of recent changes across the OpenAdapt ecosystem.*
-> *Last updated: 2026-03-31 22:48 UTC*
+> *Last updated: 2026-04-01 15:25 UTC*
 
 
 
 ## openadapt-evals
 
+
+- [feat: add GLM-OCR as primary OCR backend, pytesseract as fallback](https://github.com/OpenAdaptAI/openadapt-evals/pull/260) (#260) — merged 
 
 - [feat: OCR text anchoring (Tier 1.5a) for grounding cascade](https://github.com/OpenAdaptAI/openadapt-evals/pull/259) (#259) — merged 
 
@@ -45,8 +47,6 @@
 - [test: add 10 TRL parity tests for deprecation readiness](https://github.com/OpenAdaptAI/openadapt-evals/pull/241) (#241) — merged 
 
 - [fix: set per_device_train_batch_size to match dataset size](https://github.com/OpenAdaptAI/openadapt-evals/pull/240) (#240) — merged 
-
-- [feat: add openadapt-types dependency and _AgentOutput schema](https://github.com/OpenAdaptAI/openadapt-evals/pull/239) (#239) — merged 
 
 
 
